@@ -1,0 +1,275 @@
+{
+  "myInfo": {
+    "name": "Matthew Alexander",
+    "pronouns": "He/Him",
+    "location": "Philadelphia, PA",
+    "email": "malexander024@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/mattalexander240",
+    "website": "https://mattalexander.github.io",
+    "phone": "267-393-3309"
+  },
+  "summary": "Driven by curiosity, I constantly explore new possibilities and embrace challenges. My journey began with my tinkering with electronics as a child, fueling a desire to understand the world around me and create things from it. In my teens, I discovered art, which became my sanctuary, leading me to discover the power of combining it and technology to transform ideas into immersive experiences./Early in my career, I honed skills in HTML, CSS, and WordPress, merging artistic inclinations with technical prowess. Eager to expand my expertise, I recently delved into JavaScript and React, creating multiplayer games and websites from scratch that showcase my problem-solving abilities and passion for dynamic and inspiring user interfaces./Now, I seek to utilize my diverse skill set to collaborate with like-minded individuals and organizations that strive to make a positive impact. With a proven track record of successful project delivery and a commitment to continuous growth, I am determined to leverage technology to amplify ideas, spread creativity, and contribute to meaningful endeavors.",
+  "shortSummary": "Experienced and passionate designer and web developer with a background in art and a natural inclination for technology and progress",
+  "experience": [
+    {
+      "className": "webDev",
+      "title": "Product Designer and Developer",
+      "company": "Freelance | Full-time",
+      "location": "Philadelphia, Pennsylvania, United States",
+      "dates": "Jan 2020 - Present | 3 yrs 4 mos",
+      "description": [
+        "Developed and designed several WordPress and React websites for entities around Philadelphia, ranging from individuals to small businesses and research groups.",
+        "Created engaging and informative graphic design, digital art, and illustration to enhance the overall visual appeal of these websites.",
+        "Expertise in web design, with a focus on creating user-friendly interfaces that improve the user experience and drive engagement.",
+        "Proficient in video and motion graphics, producing high-quality content that effectively communicates key messages.",
+        "Adept at working collaboratively with clients to understand their specific needs and goals, and delivering solutions that exceed expectations.",
+        "Passionate about using my skills and experience to make a meaningful impact through visually stunning and effective design."
+      ]
+    },
+    {
+      "className": "crm",
+      "title": "Customer Relationship Management Specialist",
+      "company": "Finance of America Mortgage LLC",
+      "location": "Conshohocken, Pennsylvania, United States",
+      "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",
+      "description": [
+        "Proficiently coded design documents in HTML for TotalExpert's marketing collateral platform, ensuring high-quality and visually appealing content.",
+        "Managed, assigned, and scheduled hundreds of emails, social media posts, and print pieces, contributing to the successful execution of numerous campaigns.",
+        "Conducted archival of thousands of old pieces to declutter the company's collateral database, streamlining access to current content.",
+        "Contributed to the development of complex email Journeys that were used by hundreds of Loan Officers across the country, driving engagement and sales.",
+        "Worked collaboratively with legal and compliance teams to edit and approve/deny custom content requests, ensuring compliance with regulatory requirements.",
+        "Successfully resolved hundreds of ServiceNow support tickets, providing prompt and effective solutions to technical issues.",
+        "Played a key role in training new team members, sharing knowledge and best practices to ensure they could contribute to the team's success.",
+        "Demonstrated outstanding ability to manage tasks and responsibilities without a direct manager for over a month, showcasing self-reliance and adaptability."
+      ]
+    },
+    {
+      "className": "orfu",
+      "title": "Web Designer and Art Director",
+      "company": "Our Recipe for Unity | Full-time",
+      "location": "Philadelphia, PA",
+      "dates": "Jun 2016 - Dec 2019 | 3 yrs 7 mos",
+      "description": [
+        "Contributed to the formulation of business concepts that brought a startup nonprofit to life, providing valuable insights and perspectives.",
+        "Conducted extensive research on culture, cuisine, and nonprofits, gaining a deep understanding of the industry and identifying key opportunities for growth.",
+        "Built the nonprofit's custom website in WordPress on a tight budget, ensuring a high-quality online presence despite limited resources.",
+        "Designed, created, and posted core content and materials using Adobe PhotoShop, Illustrator, and InDesign, producing visually appealing and effective marketing collateral.",
+        "Performed administrative tasks such as equipment management, interfacing with third parties, and organizing both physical and cloud-based documents, ensuring smooth day-to-day operations.",
+        "Demonstrated strong project management skills, effectively managing multiple tasks and responsibilities to ensure timely delivery of key initiatives.",
+        "Proactively identified areas for improvement and implemented solutions to streamline processes and enhance efficiency."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Arcadia University",
+      "degree": "BA | Business Administration",
+      "concentration": "Marketing",
+      "minor": "French",
+      "location": "Glenside, Pennsylvania",
+      "dates": "2012 - 2016",
+      "GPA": "3.9",
+      "images": {
+        "ad1": {
+          "image": "ad1",
+          "caption": "An ad designed for a fictitious online shoe store. Designed using Adobe Illustrator and Photoshop."
+        },
+        "daAbstract": {
+          "image": "daAbstract",
+          "caption": "Abstract from a report for a fictitious drone manufacturer. Designed in Google Docs."
+        },
+        "daLogo": {
+          "image": "daLogo",
+          "caption": "logo for a fictitious drone manufacturer. Designed in Adobe Illustrator."
+        },
+        "daPlan": {
+          "image": "daPlan",
+          "caption": "Business plan for a fictitious drone manufacturer. Designed in Google Docs."
+        },
+        "leelah": {
+          "image": "leelah",
+          "caption": "Photoshop painting of Leelah Alcorn, a trans teenager, for a class about coming out."
+        },
+        "man": {
+          "image": "man",
+          "caption": "Ritchie's Triptych, Part 1: The Man | A photo composition about a nonbinary trans man, for a class about identity. Designed in Adobe Photoshop."
+        },
+        "woman": {
+          "image": "woman",
+          "caption": "Ritchie's Triptych, Part 3: The Woman | A photo composition about a nonbinary trans man, for a class about identity. Designed in Adobe Photoshop."
+        },
+        "middle": {
+          "image": "middle",
+          "caption": "Ritchie's Triptych, Part 2: The Middle | A photo composition about a nonbinary trans man, for a class about identity. Designed in Adobe Photoshop."
+        },
+        "mockup": {
+          "image": "mockup",
+          "caption": "Mockup for a business writing course assignment. Designed in Adobe Illustrator."
+        },
+        "plan": {
+          "image": "plan",
+          "caption": "Portion of a business plan for a fictitious moving company. Designed in Microsoft Word."
+        },
+        "ad2": {
+          "image": "ad2",
+          "caption": "another ad for a fictitious online shoe store. Designed using Adobe Illustrator and Photoshop."
+        }
+      }
+    }
+  ],
+  "projects": {
+    "rite": {
+      "className": "rite",
+      "logo": "riteLogo",
+      "order": 6,
+      "title": "Rite",
+      "subtitle": "2D Assets for a puzzle platformer game",
+      "description": "In 2015, I worked in a small team to create the prototype of a 2D puzzle platformer game called Rite. I was responsible for creating the game's 2D assets, including the main character, enemies, and environment.",
+      "links": {
+        "youtube": "https://www.youtube.com/watch?v=mpu4ooALI_8"
+      },
+      "skills": [
+        "adobe illustrator",
+        "unity 2d",
+        "adobe photoshop",
+        "sprite design",
+        "game design"
+      ],
+      "video": "riteVideo"
+    },
+    "SIGGRAPH": {
+      "logo": "sigLogo",
+      "className": "SIGGRAPH",
+      "order": 5,
+      "title": "SIGGRAPH Promotional Materials",
+      "subtitle": "Video and print design for graphics researchers",
+      "description": "In 2019 and 2020, I was responsible for creating both print designs to be used in official SIGGRAPH publications, as well as promotional videos for the team's research projects. I worked closely with the team's researchers to understand their work and create designs that effectively communicated their key findings.",
+      "images": {
+        "rabbit": {
+          "name": "rabbit",
+          "caption": "is rabbit"
+        },
+        "ccc": {
+          "name": "ccc",
+          "caption": "is this"
+        },
+        "JoshCard": {
+          "name": "JoshCard",
+          "caption": "is card"
+        },
+        "Dino": {
+          "name": "Dino",
+          "caption": "is dino"
+        },
+        "flowchart": {
+          "name": "flowchart",
+          "caption": "flowy"
+        }
+      },
+      "videos": ["sig2019", "sig2020"],
+      "skills": [
+        "scientific illustration",
+        "video editing",
+        "adobe photoshop",
+        "adobe illustrator",
+        "adobe after effects",
+        "adobe premiere pro"
+      ]
+    },
+    "clickbait": {
+      "className": "clickbait",
+      "logo": "clickbaitLogo",
+      "order": 2,
+      "title": "clickbait",
+      "subtitle": "a nonsensical, AI-powered multiplayer browser game about writing the news with your friends",
+      "description": "Between November 2022 and April 2023, I developed clickbAIt, a JavaScript game written in ReactJS and socket.io and based on the rules of the party game 'The Exquisite Corpse.' I designed and developed the game's front- and back-end, and it is currently playable on itch.io.",
+      "links": {
+        "playable on itch.io": "https://teleportustomars.itch.io/clickbait"
+      },
+      "skills": [
+        "javascript",
+        "reactjs",
+        "socket.io",
+        "HTML",
+        "CSS",
+        "APIs",
+        "nodejs",
+        "express",
+        "game design",
+        "game development"
+      ],
+      "images": {
+        "login": {
+          "name": "login",
+          "caption": "the game's login screen"
+        },
+        "grippy": {
+          "name": "grippy",
+          "caption": "it's grippy! he's here to guide you through the game."
+        },
+        "vader": {
+          "name": "vader",
+          "caption": "how lovely!"
+        },
+        "chatBox": {
+          "name": "chatBox",
+          "caption": "users can communicate and vote on captions here."
+        },
+        "liza": {
+          "name": "liza",
+          "caption": "wow!"
+        }
+      }
+    },
+    "orfu": {
+      "className": "orfu",
+      "logo": "orfu",
+      "order": 6,
+      "title": "Our Recipe for Unity",
+      "subtitle": "Website design and marketing materials for a startup nonprofit",
+      "description": "I contributed to the formulation of business concepts that brought a startup nonprofit to life, providing valuable insights and perspectives. Through extensive research on culture, cuisine, and nonprofits, I gained a deep understanding of the industry and identified key opportunities for growth. Despite limited resources, I built the nonprofit's custom website in WordPress, ensuring a high-quality online presence on a tight budget. Utilizing Adobe Photoshop, Illustrator, and InDesign, I designed, created, and posted visually appealing and effective marketing collateral, including core content and materials. Additionally, I performed administrative tasks such as equipment management, interfacing with third parties, and organizing both physical and cloud-based documents to ensure smooth day-to-day operations. With strong project management skills, I successfully managed multiple tasks and responsibilities, ensuring the timely delivery of key initiatives. Taking a proactive approach, I identified areas for improvement and implemented solutions to streamline processes and enhance efficiency.",
+      "video": "sueVideo",
+      "images": {
+        "site1": {
+          "name": "site1",
+          "caption": "Our Recipe for Unity's Donate page. Developed on Wordpress."
+        },
+        "site2": {
+          "name": "site2",
+          "caption": "Our Recipe for Unity's Resources page, an extensive repository of resources on social justice and food."
+        },
+        "site3": {
+          "name": "site3",
+          "caption": "The hub for Our Recipe for Unity's food Tapestry, where users could submit recipes and related stories."
+        },
+        "site4": {
+          "name": "site4",
+          "caption": "Our Recipe for Unity's landing page."
+        }
+      }
+    },
+
+    "joshSite": {
+      "className": "joshSite",
+      "logo": "joshLogo",
+      "order": 3,
+      "title": "joshwolper.github.io",
+      "subtitle": "Responsive website design for a graphics researcher",
+      "description": "In 2023, I built joshwolper.github.io, a reponsive website built in ReactJS and hosted on GitHub Pages.",
+      "links": {
+        "link": "https://joshwolper.github.io"
+      },
+      "video": "joshVideo"
+    },
+    "magSite": {
+      "className": "magSite",
+      "logo": "oldSiteLogo",
+      "order": 4,
+      "title": "mattalexander.gallery",
+      "subtitle": "wordpress-powered personal portfolio",
+      "description": "In 2020, I built a personal portfolio for my artwork and other projects. I designed the site using Elementor and built it in WordPress.",
+      "links": {},
+      "video": "mattVideo"
+    }
+  }
+}
