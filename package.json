@@ -1,28 +1,20 @@
 {
-  "name": "reactresume",
-  "private": true,
+  "homepage": "https://mattbookair.github.io/reactPortfolio/",
+  "name": "reactResume",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "@react-spring/web": "^9.7.2",
-    "@react-three/cannon": "^6.5.2",
-    "@react-three/drei": "^9.66.1",
-    "html-to-docx": "^1.8.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-particles": "^2.9.3",
-    "react-spring": "^9.7.1",
-    "react-three-fiber": "^6.0.13",
-    "react-to-print": "^2.14.12",
-    "sass": "^1.62.1",
-    "three": "^0.152.2",
-    "yet-another-react-lightbox": "^3.5.4"
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
