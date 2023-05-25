@@ -214,11 +214,11 @@ function App() {
   const MyInfo = () => {
     return (
       <div className="section myInfo">
-        {!isMobileSize && (
+        {/* {!isMobileSize && (
           <div id="myPic">
             <img src={fullHeadshot} id="myPic" alt="Matt Alexander" />
           </div>
-        )}
+        )} */}
         <div id="myInfoBlock">
           <div id="myName">Matt Alexander</div>
           <div id="shortBio">{Experience.shortSummary}</div>
@@ -268,39 +268,40 @@ function App() {
 
     return (
       <div className="section" id="education">
-        {education.map((edu) => (
-          <div id="innerSection" key={edu.school}>
-            <h3>Education</h3>
-            <div>
-              {edu.school}, {edu.dates}
-            </div>
-            <div>
-              {edu.degree} | {edu.minor} Minor
-            </div>
-            <div>Summa Cum Laude</div>
-            <div>{edu.location}</div>
-          </div>
-        ))}
-        <div>
-          {currentImg ? (
-            <div id="currentEduImage">
-              <div id="selectedEduImage">
-                <div
-                  id="imgClose"
-                  onClick={() => focusCurrentImage(null)}
-                  style={{ backgroundColor: "red" }}
-                >
-                  X
-                </div>
-                <img src={eduImages[currentImg]} className={currentImgName} />
-                <div id="selectedImageCaption">
-                  {education[0]["images"][currentImg].caption}
-                </div>
+        {currentImg ? (
+          <div id="currentEduImage">
+            <div id="selectedEduImage">
+              <div
+                id="imgClose"
+                onClick={() => focusCurrentImage(null)}
+                style={{ backgroundColor: "red" }}
+              >
+                X
+              </div>
+              <img src={eduImages[currentImg]} className={currentImgName} />
+              <div id="selectedImageCaption">
+                {education[0]["images"][currentImg].caption}
               </div>
             </div>
-          ) : (
+          </div>
+        ) : (
+          <div id="innerSection" key={education[0].school}>
+            <div id="eduInfo">
+              <div>
+                <h2>
+                  {education[0].school}
+                </h2>
+                <h3>{education[0].dates}</h3>
+                <div>
+                  {education[0].degree}
+                </div>
+                <div>{education[0].minor} Minor</div>
+                <div>Summa Cum Laude</div>
+                <div>{education[0].location}</div>
+              </div>
+              <div id="seeRight">relevant design work from various university courses {!isMobileSize && <>→</>}</div>
+            </div>
             <div id="selectedEduAnimationParent">
-              <h2>Relevant schoolwork</h2>
               <div id="eduImagesParent">
                 {Object.values(eduImages).map((img, index) => (
                   <img
@@ -315,10 +316,11 @@ function App() {
                 ))}
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
+    
   };
   const ProjImages = ({
     images,
@@ -416,9 +418,24 @@ function App() {
       }));
     };
 
+    const scrollToLeftEnd = () => {
+      const projContainer = document.querySelector("#projects");
+      const end =document.querySelector(".orfu");
+      projContainer.scrollLeft = end.offsetLeft;
+    }
+
+    const scrollToRightEnd = () => {
+      const projContainer = document.querySelector("#projects");
+      const beginning =document.querySelector(".clickbait");
+      projContainer.scrollLeft = beginning.offsetLeft;
+    }
+
     return (
       <div id="projects" className="section">
-        <div id="projectsTitle">product design projects</div>
+          {/* <div id="dArrows">
+            <div id="leftArrow" className="dArrow" onClick={() => scrollToRightEnd()}>&#8592;</div>
+            <div id="rightArrow" className="dArrow" onClick={() => scrollToLeftEnd()}>&#8594;</div>
+          </div> */}
           {Object.values(projects)
             .sort((a, b) => a.order - b.order)
             .map((project, index) => (
@@ -537,6 +554,11 @@ function App() {
       currentSection.current.style.transform = `translate(${dx}px,${dy}px) rotateY(0deg) scale(.5) perspective(80px) rotateX(10deg) rotateZ(90deg)`;
     };
 
+    const mobileUpdatePositions = (currentSection) => {
+      const card = currentSection.current;
+      card.classList.add("mobileActiveCard")
+    }
+
     useEffect(() => {
       if (currentSection === null) return;
       // Update position on mount and whenever currentSection or window size changes
@@ -545,6 +567,8 @@ function App() {
         setTimeout(() => {
           currentSection.current.classList.add("cardActive");
         }, 500);
+      } else {
+        mobileUpdatePositions(currentSection);
       }
       setTimeout(() => {
         sectionGifRef.current.classList.add("sectionGifActive");
@@ -553,9 +577,17 @@ function App() {
     return (
       <div
         id="selectorButton"
-        style={{
+        style={  isMobileSize ?
+          (sectionRef===currentSection ? ({
           backgroundImage: `url(${sectionCardBG})`,
-        }}
+        }) : ({
+          backgroundImage: `none`,
+        })) : (
+          {
+            backgroundImage: `url(${sectionCardBG})`,
+          }
+        )
+          }
         className={
           currentSection === sectionRef
             ? selectorClass
@@ -668,7 +700,9 @@ function App() {
           ref={resumeSectionRef}
         >
           {currentComp === "experience" ? (
+            <>
             <ExperienceComp experience={experience} />
+            </>
           ) : currentComp === "education" ? (
             <EducationComp education={education} />
           ) : currentComp === "projects" ? (
@@ -678,25 +712,22 @@ function App() {
           ) : null}
         </div>
         <div id="summonArea" ref={summonAreaRef}>
+        <SectionTitle />
           {currentComp === "experience" ? (
             <>
               {!isMobileSize && <SectionGif gif={experienceAnimation} id="expAnimation" />}
-              {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "education" ? (
             <>
               {!isMobileSize && <SectionGif gif={educationAnimation} id="eduAnimation" />}
-              {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "projects" ? (
             <>
               {!isMobileSize && <SectionGif gif={projectsAnimation} id="projAnimation" />}
-              {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "myInfo" ? (
             <>
               {!isMobileSize && <SectionGif gif={myInfoAnimation} id="myInfoAnimation" />}
-              {isMobileSize && <SectionTitle />}
             </>
           ) : null}
         </div>
