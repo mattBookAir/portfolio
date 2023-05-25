@@ -111,6 +111,36 @@ function App() {
     woman: woman,
   };
 
+  const [dpi, setDpi] = useState(null);
+
+  const handleDpiChange = () => {
+    console.log("dpi before change", window.devicePixelRatio);
+    const dpiValue = window.devicePixelRatio * 96; // 96 DPI is the standard for most screens
+    setDpi(dpiValue);
+  };
+
+  useEffect(() => {
+    const measureDpi = () => {
+      const div = document.createElement('div');
+      div.style.width = '1in'; // Set the width to 1 inch
+      div.style.visibility = 'hidden';
+      document.body.appendChild(div);
+
+      const dpiValue = div.offsetWidth; // Obtain the width in pixels
+      document.body.removeChild(div);
+
+      setDpi(dpiValue);
+      console.log("dpi", dpiValue);
+    };
+
+    measureDpi();
+
+    window.addEventListener('resize', measureDpi);
+
+    return () => {
+      window.removeEventListener('resize', measureDpi);
+    };
+  }, []);
   const Welcome = () => {
     return (
       <div id="welcome">
@@ -155,15 +185,15 @@ function App() {
       </div>
     );
   };
-  const MySiteLink = () => {
+  const MySiteLink = ({link, linkText, id}) => {
     return (
       <a
-        href="https://mattalexander.gallery/alt"
+        href={link}
         target="_blank"
         rel="noreferrer"
-        id="mySiteLink"
+        id = {id}
       >
-        <div id="visitText">visit my gallery</div>
+        <div id="visitText">{linkText}</div>
       </a>
     );
   };
@@ -389,7 +419,6 @@ function App() {
     return (
       <div id="projects" className="section">
         <div id="projectsTitle">product design projects</div>
-        <div id="projectsParent">
           {Object.values(projects)
             .sort((a, b) => a.order - b.order)
             .map((project, index) => (
@@ -423,8 +452,16 @@ function App() {
                     activateSelectedImage={activateSelectedImage}
                   />
                 )}
-                {project.className === "joshSite" && <JoshSiteIFrame />}
-                {project.className === "magSite" && <MySiteLink />}
+                {project.className === "joshSite" && <MySiteLink 
+                  link="https://joshwolper.github.io"
+                  id="joshSiteLink" 
+                  linkText="visit site"
+                />}
+                {project.className === "magSite" && <MySiteLink 
+                  link="https://mattalexander.gallery/alt"
+                  id="mySiteLink" 
+                  linkText="visit my gallery"
+                />}
                 {project.className === "rite" && <RiteIFrame />}
                 <div id="projectDescription">{project.description}</div>
                 <div id="skillsBox">
@@ -437,7 +474,6 @@ function App() {
                 </div>
               </div>
             ))}
-        </div>
       </div>
     );
   };
@@ -479,6 +515,7 @@ function App() {
     sectionRef,
     selectorClass,
     sectionCardBG,
+    sectionGif
   }) => {
     const finalSectionName = (sectionName) => {
       if (sectionName === "myInfo") {
@@ -505,10 +542,10 @@ function App() {
       // Update position on mount and whenever currentSection or window size changes
       if (!isMobileSize) {
         updatePositions(currentSection);
+        setTimeout(() => {
+          currentSection.current.classList.add("cardActive");
+        }, 500);
       }
-      setTimeout(() => {
-        currentSection.current.classList.add("cardActive");
-      }, 500);
       setTimeout(() => {
         sectionGifRef.current.classList.add("sectionGifActive");
       }, 600);
@@ -535,12 +572,12 @@ function App() {
           sectionRef.current.classList.remove("glow");
         }}
       >
-        <div className="card" id="cardParent">
+       <div className="card" id="cardParent">
           <div id="sectionName">{finalSectionName(sectionName)}</div>
           <img
             id="sectionPic"
             ref={sectionPicRef}
-            src={sectionRef === currentSection ? myLogo : sectionPicture}
+            src={sectionRef === currentSection ? (isMobileSize ? sectionGif : myLogo) : sectionPicture}
             alt="Section"
           />
         </div>
@@ -549,7 +586,6 @@ function App() {
   };
   const SectionGif = ({ gif, id }) => {
     return (
-      <>
         <img
           ref={sectionGifRef}
           id={id}
@@ -557,7 +593,6 @@ function App() {
           src={gif}
           alt="Section Animation"
         />
-      </>
     );
   };
 
@@ -594,6 +629,7 @@ function App() {
           sectionRef={projectsRef}
           selectorClass="projects"
           sectionCardBG={projectsBg}
+          sectionGif={projectsAnimation}
         />
         <SelectorButton
           sectionName="experience"
@@ -602,6 +638,7 @@ function App() {
           sectionRef={experienceRef}
           selectorClass="experience"
           sectionCardBG={expBg}
+          sectionGif={experienceAnimation}
         />
         <SelectorButton
           sectionName="myInfo"
@@ -610,6 +647,7 @@ function App() {
           sectionRef={myInfoRef}
           selectorClass="myInfo"
           sectionCardBG={meBg}
+          sectionGif={myInfoAnimation}
         />
         <SelectorButton
           sectionName="education"
@@ -619,6 +657,7 @@ function App() {
           selectorClass="education"
           sectionAnimation={educationAnimation}
           sectionCardBG={eduBg}
+          sectionGif={educationAnimation}
         />
       </div>
 
@@ -641,22 +680,22 @@ function App() {
         <div id="summonArea" ref={summonAreaRef}>
           {currentComp === "experience" ? (
             <>
-              <SectionGif gif={experienceAnimation} id="expAnimation" />
+              {!isMobileSize && <SectionGif gif={experienceAnimation} id="expAnimation" />}
               {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "education" ? (
             <>
-              <SectionGif gif={educationAnimation} id="eduAnimation" />
+              {!isMobileSize && <SectionGif gif={educationAnimation} id="eduAnimation" />}
               {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "projects" ? (
             <>
-              <SectionGif gif={projectsAnimation} id="projAnimation" />
+              {!isMobileSize && <SectionGif gif={projectsAnimation} id="projAnimation" />}
               {isMobileSize && <SectionTitle />}
             </>
           ) : currentComp === "myInfo" ? (
             <>
-              <SectionGif gif={myInfoAnimation} id="myInfoAnimation" />
+              {!isMobileSize && <SectionGif gif={myInfoAnimation} id="myInfoAnimation" />}
               {isMobileSize && <SectionTitle />}
             </>
           ) : null}
