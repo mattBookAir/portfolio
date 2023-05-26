@@ -581,7 +581,7 @@ function App() {
           (sectionRef===currentSection ? ({
           backgroundImage: `url(${sectionCardBG})`,
         }) : ({
-          backgroundImage: `none`,
+          backgroundColor: `black`,
         })) : (
           {
             backgroundImage: `url(${sectionCardBG})`,
