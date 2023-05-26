@@ -151,6 +151,8 @@ font-size: .7rem
   text-transform: uppercase !important;
 }
 
+
+
 .color1 {
   box-shadow: shadow(purple);
   animation: hueRotate 10s 0s linear infinite, color1 19s 0s linear infinite;
@@ -810,6 +812,14 @@ h2 {
   #projectDescription {
     font-size: 3vw !important;
   }
+  .description {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+  }
+  .descriptionItem {
+
+  }
   #projectSubtitle {
     font-size: 3.2vw !important;
   }
@@ -934,6 +944,10 @@ h2 {
       line-height: 1.25rem !important;
     }
     width: 80vw !important;
+    border: none !important;
+    &:before{
+      display: none !important;
+    }
   }
   #imgCaption {
     font-size: 4vw !important;
