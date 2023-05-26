@@ -15,7 +15,7 @@
       "className": "webDev",
       "title": "Product Designer and Developer",
       "company": "Freelance | Full-time",
-      "location": "Philadelphia, Pennsylvania, United States",
+      "location": "Philadelphia, PA",
       "dates": "Jan 2020 - Present | 3 yrs 4 mos",
       "description": [
         "Developed and designed several WordPress and React websites for entities around Philadelphia, ranging from individuals to small businesses and research groups.",
@@ -30,7 +30,7 @@
       "className": "crm",
       "title": "Customer Relationship Management Specialist",
       "company": "Finance of America Mortgage LLC",
-      "location": "Conshohocken, Pennsylvania, United States",
+      "location": "Conshohocken, PA",
       "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",
       "description": [
         "Proficiently coded design documents in HTML for TotalExpert's marketing collateral platform, ensuring high-quality and visually appealing content.",
@@ -47,7 +47,7 @@
       "className": "orfu",
       "title": "Web Designer and Art Director",
       "company": "Our Recipe for Unity | Full-time",
-      "location": "Philadelphia, PA",
+      "location": "Easton, PA",
       "dates": "Jun 2016 - Dec 2019 | 3 yrs 7 mos",
       "description": [
         "Formulated business concepts for startup nonprofit, providing insights and perspectives.",
@@ -197,7 +197,7 @@
         "game design",
         "game development"
       ],
-      "images": {
+      "cheerios": {
         "login": {
           "name": "login",
           "caption": "the game's login screen"

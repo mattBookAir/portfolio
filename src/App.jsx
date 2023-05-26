@@ -192,6 +192,7 @@ function App() {
         target="_blank"
         rel="noreferrer"
         id = {id}
+        className="siteLink"
       >
         <div id="visitText">{linkText}</div>
       </a>
@@ -400,6 +401,7 @@ function App() {
     );
   };
   const ProjectsComp = ({ projects }) => {
+    const scrollRef = useRef(null);
     const [selectedImages, setSelectedImages] = useState(() => {
       const initialState = {};
       Object.values(projects).forEach((project) => {
@@ -418,24 +420,28 @@ function App() {
       }));
     };
 
-    const scrollToLeftEnd = () => {
-      const projContainer = document.querySelector("#projects");
-      const end =document.querySelector(".orfu");
-      projContainer.scrollLeft = end.offsetLeft;
-    }
-
-    const scrollToRightEnd = () => {
-      const projContainer = document.querySelector("#projects");
-      const beginning =document.querySelector(".clickbait");
-      projContainer.scrollLeft = beginning.offsetLeft;
-    }
+    const handleScroll = (event) => {
+      event.preventDefault();
+      const scrollAmount = event.deltaY * 2;
+      const divElement = scrollRef.current;
+      if (divElement) {
+        divElement.scrollLeft += scrollAmount;
+      }
+    };
+    
+    useEffect(() => {
+      const divElement = scrollRef.current;
+      if (divElement) {
+        divElement.addEventListener('wheel', handleScroll);
+        return () => {
+          divElement.removeEventListener('wheel', handleScroll);
+        };
+      }
+    }, [scrollRef]);
+    
 
     return (
-      <div id="projects" className="section">
-          {/* <div id="dArrows">
-            <div id="leftArrow" className="dArrow" onClick={() => scrollToRightEnd()}>&#8592;</div>
-            <div id="rightArrow" className="dArrow" onClick={() => scrollToLeftEnd()}>&#8594;</div>
-          </div> */}
+      <div id="projects" className="section" ref={scrollRef}>
           {Object.values(projects)
             .sort((a, b) => a.order - b.order)
             .map((project, index) => (
@@ -478,6 +484,11 @@ function App() {
                   link="https://mattalexander.gallery/alt"
                   id="mySiteLink" 
                   linkText="visit my gallery"
+                />}
+                {project.className === "clickbait" && <MySiteLink 
+                  link="https://teleportustomars.itch.io/clickbait"
+                  id="cbLink" 
+                  linkText="visit game"
                 />}
                 {project.className === "rite" && <RiteIFrame />}
                 <div id="projectDescription">{project.description}</div>
