@@ -351,7 +351,7 @@ function App() {
   };
   const Lightbox = ({ selectedImage, projectName, closeAction, imgObject }) => {
     const lightboxRef = useRef(null);
-
+    
     useEffect(() => {
       lightboxRef.current.classList.add("lightBoxFadeIn");
       setTimeout(() => {
@@ -565,10 +565,6 @@ function App() {
     const mobileUpdatePositions = (currentSection) => {
       const card = currentSection.current;
       card.classList.add("mobileActiveCard");
-      card.classList.add("mobileActiveCardFlip");
-      setTimeout(() => {
-        card.classList.remove("mobileActiveCardFlip");
-      }, 300);
     }
 
     useEffect(() => {

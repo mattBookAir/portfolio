@@ -1,7 +1,7 @@
 $color_1: black;
 $color_2: white;
 $color_3: #1f75fe;
-$color_4: rgba(255, 165, 0, 0.2);
+$color_4: rgba(255, 255, 0, 0.18);
 $font-family_1: Times;
 $font-family_2: "ygo";
 $background-color_1: rgba(255, 255, 255, 0.6);
@@ -518,13 +518,7 @@ body {
   z-index: -2 !important;
   position: relative;
 
-  &:hover {
-    pointer-events: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
+
 }
 
 #activeCardParent {
@@ -753,7 +747,6 @@ body {
 
 #resumeSection {
   width: 100%;
-  border-radius: 7px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -968,7 +961,7 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-animation: slide-from-left .4s ease-in-out forwards;
@@ -1221,8 +1214,48 @@ h2 {
   }
 }
 
+@media (hover: hover) {
+  .projectImage:hover {
+    -webkit-animation: pulseGlow 0.5s ease-in-out alternate infinite;
+            animation: pulseGlow 0.5s ease-in-out alternate infinite;
+    -o-object-fit: contain;
+       object-fit: contain;
+    transition: all 0.2s ease-in-out;
+  }
+  
+.siteLink:hover {
+  cursor: pointer;
+  color: lightyellow !important;
+  transition: all 0.15s ease-in-out;
+  // background-size: 130%;
+  background-color: rgba(0,0,0,0.5) !important;
+
+  #visitText {
+    transform: scale(1.5);
+    transition: all 0.15s ease-in-out;
+  }
+}
+#eduImage:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  -webkit-animation: pulseGlow 0.5s ease-in-out alternate infinite;
+          animation: pulseGlow 0.5s ease-in-out alternate infinite;
+}
+.activeCard:hover {
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+}
+
 
 @media (max-width: 600px) {
+  .section {
+    border-radius: 0 !important;
+  }
 
   #selectorButtons {
     height: 15vh !important;
@@ -1245,7 +1278,7 @@ h2 {
   }
 
   .siteLink {
-    height: 100% !important;
+    height: 50% !important;
   }
 
   #myInfoParent {
@@ -1429,7 +1462,6 @@ h2 {
   }
   .section {
     z-index: 30 !important;
-    border-radius: 10px !important;
     align-content: center !important;
     align-items: center !important;
     margin: 0 !important;
@@ -1465,7 +1497,7 @@ height: 100% !important;
     width: fit-content !important;
     padding: 0 !important;
     margin: 0 !important;
-    height: 70vh !important;
+    height: 60vh !important;
   }
   #expAnimation img {
     overflow: hidden !important;
@@ -1719,19 +1751,9 @@ animation-delay: 0.6s !important;
   overflow: hidden;
   height: 20vw;
   width: 100%;
-  &:hover {
-    cursor: pointer;
-    color: lightyellow !important;
-    transition: all 0.15s ease-in-out;
-    // background-size: 130%;
-    background-color: rgba(0,0,0,0.5) !important;
+  }
 
-    #visitText {
-      transform: scale(1.5);
-      transition: all 0.15s ease-in-out;
-    }
-  }
-  }
+
 
 #mySiteLink {
   background-image:url('./mySiteScreenshot.png');
@@ -1888,12 +1910,7 @@ height: 100%;}
   align-items: center;
 }
 
-#eduImage:hover {
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  -webkit-animation: pulseGlow 0.5s ease-in-out alternate infinite;
-          animation: pulseGlow 0.5s ease-in-out alternate infinite;
-}
+
 #education {
   -webkit-animation: blur-in .4s ease-in-out forwards;
   animation: blur-in .4s ease-in-out forwards;
@@ -2125,13 +2142,6 @@ height: 100%;}
           filter: drop-shadow(0px 0px 5px white);
 }
 
-.projectImage:hover {
-  -webkit-animation: pulseGlow 0.5s ease-in-out alternate infinite;
-          animation: pulseGlow 0.5s ease-in-out alternate infinite;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transition: all 0.2s ease-in-out;
-}
 
 @-webkit-keyframes pulseGlow {
   from {
