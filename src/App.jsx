@@ -145,7 +145,7 @@ function App() {
     return (
       <div id="welcome">
         <div>
-          <h1 id="welcomeText">Matt Alexander</h1>
+          <h1 id="welcomeText">Matt J Alexander</h1>
           <h2 id="welcomeText1">
             Web Developer, Product Designer, and Digital Media Specialist
           </h2>
@@ -214,21 +214,18 @@ function App() {
   };
   const MyInfo = () => {
     return (
-      <div className="section myInfo">
-        {/* {!isMobileSize && (
-          <div id="myPic">
-            <img src={fullHeadshot} id="myPic" alt="Matt Alexander" />
-          </div>
-        )} */}
-        <div id="myInfoBlock">
-          <div id="myName">Matt Alexander</div>
-          <div id="shortBio">{Experience.shortSummary}</div>
-          <div id="bio">
-            {Experience.summary.split("/").map((item, index) => (
-              <React.Fragment key={index}>
-                <div className="aboutMeParagraph">{item}</div>
-              </React.Fragment>
-            ))}
+      <div id="myInfoParent" className="sunGlow">
+        <div className="section myInfo">
+          <div id="myInfoBlock">
+            <div id="myName">Matt Alexander</div>
+            <div id="shortBio">{Experience.shortSummary}</div>
+            <div id="bio">
+              {Experience.summary.split("/").map((item, index) => (
+                <React.Fragment key={index}>
+                  <div className="aboutMeParagraph">{item}</div>
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -271,14 +268,14 @@ function App() {
       <div className="section" id="education">
         {currentImg ? (
           <div id="currentEduImage">
-            <div id="selectedEduImage">
-              <div
+            <div
                 id="imgClose"
                 onClick={() => focusCurrentImage(null)}
                 style={{ backgroundColor: "red" }}
               >
                 X
               </div>
+            <div id="selectedEduImage">
               <img src={eduImages[currentImg]} className={currentImgName} />
               <div id="selectedImageCaption">
                 {education[0]["images"][currentImg].caption}
@@ -422,7 +419,7 @@ function App() {
 
     const handleScroll = (event) => {
       event.preventDefault();
-      const scrollAmount = event.deltaY * 2;
+      const scrollAmount = event.deltaY * 4;
       const divElement = scrollRef.current;
       if (divElement) {
         divElement.scrollLeft += scrollAmount;
@@ -567,7 +564,11 @@ function App() {
 
     const mobileUpdatePositions = (currentSection) => {
       const card = currentSection.current;
-      card.classList.add("mobileActiveCard")
+      card.classList.add("mobileActiveCard");
+      card.classList.add("mobileActiveCardFlip");
+      setTimeout(() => {
+        card.classList.remove("mobileActiveCardFlip");
+      }, 300);
     }
 
     useEffect(() => {
@@ -741,9 +742,9 @@ function App() {
               {!isMobileSize && <SectionGif gif={myInfoAnimation} id="myInfoAnimation" />}
             </>
           ) : null}
+                <div id="cardMat" ref={cardMatRef} />
         </div>
       </div>
-      <div id="cardMat" ref={cardMatRef} />
     </div>
   );
 }

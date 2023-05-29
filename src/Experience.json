@@ -18,46 +18,29 @@
       "location": "Philadelphia, PA",
       "dates": "Jan 2020 - Present | 3 yrs 4 mos",
       "description": [
-        "Developed and designed several WordPress and React websites for entities around Philadelphia, ranging from individuals to small businesses and research groups.",
-        "Created engaging and informative graphic design, digital art, and illustration to enhance the overall visual appeal of these websites.",
-        "Expertise in web design, with a focus on creating user-friendly interfaces that improve the user experience and drive engagement.",
-        "Proficient in video and motion graphics, producing high-quality content that effectively communicates key messages.",
-        "Adept at working collaboratively with clients to understand their specific needs and goals, and delivering solutions that exceed expectations.",
+        "Developed responsive websites and engaging graphics for individuals and businesses around Philadelphia.",
+        "Worked collaboratively with clients to understand their specific needs and goals, and delivering solutions that exceed expectations.",
         "Passionate about using my skills and experience to make a meaningful impact through visually stunning and effective design."
       ]
     },
-    {
-      "className": "crm",
-      "title": "Customer Relationship Management Specialist",
-      "company": "Finance of America Mortgage LLC",
-      "location": "Conshohocken, PA",
-      "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",
-      "description": [
-        "Proficiently coded design documents in HTML for TotalExpert's marketing collateral platform, ensuring high-quality and visually appealing content.",
-        "Managed, assigned, and scheduled hundreds of emails, social media posts, and print pieces, contributing to the successful execution of numerous campaigns.",
-        "Conducted archival of thousands of old pieces to declutter the company's collateral database, streamlining access to current content.",
-        "Contributed to the development of complex email Journeys that were used by hundreds of Loan Officers across the country, driving engagement and sales.",
-        "Worked collaboratively with legal and compliance teams to edit and approve/deny custom content requests, ensuring compliance with regulatory requirements.",
-        "Successfully resolved hundreds of ServiceNow support tickets, providing prompt and effective solutions to technical issues.",
-        "Played a key role in training new team members, sharing knowledge and best practices to ensure they could contribute to the team's success.",
-        "Demonstrated outstanding ability to manage tasks and responsibilities without a direct manager for over a month, showcasing self-reliance and adaptability."
-      ]
-    },
-    {
-      "className": "orfu",
-      "title": "Web Designer and Art Director",
-      "company": "Our Recipe for Unity | Full-time",
-      "location": "Easton, PA",
-      "dates": "Jun 2016 - Dec 2019 | 3 yrs 7 mos",
-      "description": [
-        "Formulated business concepts for startup nonprofit, providing insights and perspectives.",
-        "Researched culture, cuisine, and nonprofits, gaining industry understanding and identifying growth opportunities.",
-        "Built custom WordPress website on tight budget, ensuring high-quality online presence.",
-        "Designed, created, and posted content/materials using Adobe software, producing visually appealing marketing collateral.",
-        "Performed administrative tasks such as equipment management, interfacing with third parties, and organizing documents.",
-        "Demonstrated strong project management skills, managing multiple tasks/responsibilities to ensure timely delivery of initiatives.",
-        "Identified areas for improvement and implemented solutions to streamline processes and enhance efficiency."
-      ]    }
+    {    "className": "crm",    "title": "Customer Relationship Management Specialist",    "company": "Finance of America Mortgage LLC",    "location": "Conshohocken, PA",    "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",    "description": [      "Proficiently coded HTML design documents for TotalExpert's marketing collateral platform.",      "Managed, assigned, and scheduled emails, social media posts, and print pieces for successful campaigns.",      "Conducted archival of old pieces to declutter the company's collateral database.",      "Contributed to the development of complex email Journeys used by hundreds of Loan Officers.",      "Worked collaboratively with legal and compliance teams to edit and approve/deny custom content requests.",      "Resolved ServiceNow support tickets, providing prompt and effective solutions to technical issues.",      "Played a key role in training new team members, sharing knowledge and best practices.",      "Demonstrated outstanding ability to manage tasks and responsibilities without direct supervision."    ]
+  },
+  {
+    "className": "orfu",
+    "title": "Web Designer and Art Director",
+    "company": "Our Recipe for Unity | Full-time",
+    "location": "Easton, PA",
+    "dates": "Jun 2016 - Dec 2019 | 3 yrs 7 mos",
+    "description": [
+      "Formulated business concepts for startup nonprofit, providing insights and perspectives.",
+      "Researched culture, cuisine, and nonprofits, identifying growth opportunities.",
+      "Built custom WordPress website on a tight budget for a high-quality online presence.",
+      "Designed, created, and posted visually appealing marketing collateral using Adobe software.",
+      "Performed administrative tasks such as equipment management and organizing documents.",
+      "Demonstrated strong project management skills, ensuring timely delivery of initiatives.",
+      "Identified areas for improvement and implemented solutions to streamline processes."
+    ]
+  }
   ],
   "education": [
     {
