@@ -708,7 +708,6 @@ function App() {
       <div id="playingField">
         <div
           id="resumeSection"
-          className="pulsingShadow"
           ref={resumeSectionRef}
         >
           {currentComp === "experience" ? (

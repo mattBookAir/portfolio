@@ -3,7 +3,7 @@ $color_2: white;
 $color_3: #1f75fe;
 $color_4: rgba(255, 165, 0, 0.2);
 $font-family_1: Times;
-$font-family_2: "Arial";
+$font-family_2: "ygo";
 $background-color_1: rgba(255, 255, 255, 0.6);
 
 
@@ -765,6 +765,7 @@ body {
   max-width: 100%;
   grid-area: infoArea;
   position: relative;
+
 }
 
 
@@ -1222,8 +1223,13 @@ h2 {
 
 
 @media (max-width: 600px) {
-
-
+ #skillsBox {
+  margin-bottom: 5% !important;
+ }
+  .projectLogo {
+    width: 90% !important;
+    object-fit: contain !important;
+  }
 
   .siteLink {
     height: 100% !important;
@@ -1372,7 +1378,7 @@ h2 {
     align-content: flex-start !important;
     max-width: 100vw !important;
     overflow-x: scroll;
-
+    height: 100% !important;
   }
 
   #playingField {
@@ -1394,7 +1400,8 @@ h2 {
   .section {
     z-index: 30 !important;
     border-radius: 10px !important;
-    align-content: start !important;
+    align-content: center !important;
+    align-items: center !important;
   }
   #expContent {
     padding: 0 !important;
@@ -1462,14 +1469,16 @@ height: 100% !important;
   flex-wrap: nowrap !important;
  }
  #project {
-  height: 60vh !important;
   width: 80vw !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
  }
 
  #projects {
   grid-template-columns: repeat(6, 1fr) !important;
-  gap: 2% !important;
- }
+  margin: 0 !important;
+  grid-template-rows: 100%;
+  gap: 2% !important; }
 }
 .cardActive #sectionPic {
 -o-object-fit: contain !important;
@@ -2131,7 +2140,6 @@ height: 100%;}
   display: grid;
   grid-template-columns: repeat(6, 30vw);
   grid-template-rows: 1fr;
-  overflow-y: hidden;
   width: 100%;
   gap: 2%;
   position: relative;
