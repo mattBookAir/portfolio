@@ -17,13 +17,21 @@
       "company": "Freelance | Full-time",
       "location": "Philadelphia, PA",
       "dates": "Jan 2020 - Present | 3 yrs 4 mos",
-      "description": [
-        "Developed responsive websites and engaging graphics for individuals and businesses around Philadelphia.",
+      "description":[
+        "Developed and designed several WordPress and React websites for entities around Philadelphia, ranging from individuals to small businesses and research groups.",
+        "Created engaging and informative graphic design, digital art, and illustration to enhance the overall visual appeal of these websites.",
+        "Demonstrated expertise in web design, with a focus on creating user-friendly interfaces that improve the user experience and drive engagement.",
+        "Designed video and motion graphics, producing high-quality content that effectively communicates key messages.",
         "Worked collaboratively with clients to understand their specific needs and goals, and delivering solutions that exceed expectations.",
-        "Continually improving my skills with new technologies and techniques."
+        "Constantly self-teach to ensure that I'm always up-to-date."
       ]
     },
-    {    "className": "crm",    "title": "Customer Relationship Management Specialist",    "company": "Finance of America Mortgage LLC",    "location": "Conshohocken, PA",    "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",    "description": [      "Proficiently coded HTML design documents for TotalExpert's marketing collateral platform.",      "Managed, assigned, and scheduled emails, social media posts, and print pieces for successful campaigns.",      "Conducted archival of old pieces to declutter the company's collateral database.",      "Contributed to the development of complex email Journeys used by hundreds of Loan Officers.",      "Worked collaboratively with legal and compliance teams to edit and approve/deny custom content requests.",      "Resolved ServiceNow support tickets, providing prompt and effective solutions to technical issues.",      "Played a key role in training new team members, sharing knowledge and best practices.",      "Demonstrated outstanding ability to manage tasks and responsibilities without direct supervision."    ]
+    {    "className": "crm",    "title": "CRM Specialist",    "company": "Finance of America Mortgage LLC",    "location": "Conshohocken, PA",    "dates": "Jan 2021 - Jan 2022 | 1 yr 1 mo",    "description": ["Proficiently coded design documents in HTML for TotalExpert's marketing collateral platform, ensuring high-quality and visually appealing content.", 
+    "Managed, assigned, and scheduled hundreds of emails, social media posts, and print pieces, contributing to the successful execution of numerous campaigns.", 
+    "Conducted archival of thousands of old pieces to declutter the company's collateral database, streamlining access to current content.", 
+    "Contributed to the development of complex email Journeys that were used by hundreds of Loan Officers across the country, driving engagement and sales.", 
+    "Worked collaboratively with legal and compliance teams to edit and approve/deny custom content requests, ensuring compliance with regulatory requirements.", 
+    "Demonstrated  ability to manage tasks and responsibilities without a direct manager for over a month, showcasing self-reliance and adaptability."]
   },
   {
     "className": "orfu",
@@ -31,15 +39,12 @@
     "company": "Our Recipe for Unity | Full-time",
     "location": "Easton, PA",
     "dates": "Jun 2016 - Dec 2019 | 3 yrs 7 mos",
-    "description": [
-      "Formulated business concepts for startup nonprofit, providing insights and perspectives.",
-      "Researched culture, cuisine, and nonprofits, identifying growth opportunities.",
-      "Built custom WordPress website on a tight budget for a high-quality online presence.",
-      "Designed, created, and posted visually appealing marketing collateral using Adobe software.",
-      "Performed administrative tasks such as equipment management and organizing documents.",
-      "Demonstrated strong project management skills, ensuring timely delivery of initiatives.",
-      "Identified areas for improvement and implemented solutions to streamline processes."
-    ]
+    "description": ["Contributed to the formulation of business concepts that brought a startup nonprofit to life, providing valuable insights and perspectives.", 
+    "Conducted extensive research on culture, cuisine, and nonprofits, gaining a deep understanding of the industry and identifying key opportunities for growth.", 
+    "Built the nonprofit's custom website in WordPress on a tight budget, ensuring a high-quality online presence despite limited resources.", 
+    "Designed, created, and posted core content and materials using Adobe PhotoShop, Illustrator, and InDesign, producing visually appealing and effective marketing collateral.", 
+    "Performed administrative tasks such as equipment management, interfacing with third parties, and organizing both physical and cloud-based documents, ensuring smooth day-to-day operations.", 
+    "Demonstrated strong project management skills, effectively managing multiple tasks and responsibilities to ensure timely delivery of key initiatives."]
   }
   ],
   "education": [
@@ -125,27 +130,33 @@
       "order": 5,
       "title": "SIGGRAPH Promotional Materials",
       "subtitle": "Video and print design for graphics researchers",
-      "description": "In 2019 and 2020, I was responsible for creating both print designs to be used in official SIGGRAPH publications, as well as promotional videos for the team's research projects. I worked closely with the team's researchers to understand their work and create designs that effectively communicated their key findings.",
+      "description": "In 2019 and 2020, I created scientific illustrations and promotional videos used for two separate official SIGGRAPH publications. I worked closely with the team's researchers to understand their work and create designs that effectively communicated their key findings.",
+      "link1":"https://dl.acm.org/doi/10.1145/3306346.3322949",
+      "link2":"https://dl.acm.org/doi/abs/10.1145/3386569.3392428",
       "images": {
         "rabbit": {
           "name": "rabbit",
-          "caption": "is rabbit"
+          "caption": "Figure 12 from 'CD-MPM: continuum damage material point methods for dynamic fracture animation', as published in ACM Transactions on Graphics in 2019.",
+          "citation":"Joshuah Wolper, Yu Fang, Minchen Li, Jiecong Lu, Ming Gao, and Chenfanfu Jiang. 2019. CD-MPM: continuum damage material point methods for dynamic fracture animation. ACM Trans. Graph. 38, 4, Article 119 (August 2019), 15 pages. https://doi.org/10.1145/3306346.3322949"
         },
         "ccc": {
           "name": "ccc",
-          "caption": "is this"
+          "caption": "Figure 14 from 'CD-MPM: continuum damage material point methods for dynamic fracture animation', as published in ACM Transactions on Graphics in 2019.",
+          "citation":"Joshuah Wolper, Yu Fang, Minchen Li, Jiecong Lu, Ming Gao, and Chenfanfu Jiang. 2019. CD-MPM: continuum damage material point methods for dynamic fracture animation. ACM Trans. Graph. 38, 4, Article 119 (August 2019), 15 pages. https://doi.org/10.1145/3306346.3322949"
         },
         "JoshCard": {
           "name": "JoshCard",
-          "caption": "is card"
+          "caption": "Business card for papers' primary author, Joshuah Wolper"
         },
         "Dino": {
           "name": "Dino",
-          "caption": "is dino"
+          "caption": "Figure 20 from from 'CD-MPM: continuum damage material point methods for dynamic fracture animation', as published in ACM Transactions on Graphics in 2019.",
+          "citation":"Joshuah Wolper, Yu Fang, Minchen Li, Jiecong Lu, Ming Gao, and Chenfanfu Jiang. 2019. CD-MPM: continuum damage material point methods for dynamic fracture animation. ACM Trans. Graph. 38, 4, Article 119 (August 2019), 15 pages. https://doi.org/10.1145/3306346.3322949"
         },
         "flowchart": {
           "name": "flowchart",
-          "caption": "flowy"
+          "caption": "Figure 13 from 'AnisoMPM: animating anisotropic damage mechanics' as published in ACM Transactions on Graphics in 2020.",
+          "citation":"Joshuah Wolper, Yunuo Chen, Minchen Li, Yu Fang, Ziyin Qu, Jiecong Lu, Meggie Cheng, and Chenfanfu Jiang. 2020. AnisoMPM: animating anisotropic damage mechanics. ACM Trans. Graph. 39, 4, Article 37 (August 2020), 16 pages. https://doi.org/10.1145/3386569.3392428"
         }
       },
       "videos": ["sig2019", "sig2020"],
@@ -163,7 +174,7 @@
       "logo": "clickbaitLogo",
       "order": 2,
       "title": "clickbait",
-      "subtitle": "a nonsensical, AI-powered multiplayer browser game about writing the news with your friends",
+      "subtitle": "an AI-powered multiplayer browser game about writing the news",
       "description": "Between November 2022 and April 2023, I developed clickbAIt, a JavaScript game written in ReactJS and socket.io and based on the rules of the party game 'The Exquisite Corpse.' I designed and developed the game's front- and back-end, and it is currently playable on itch.io.",
       "links": {
         "playable on itch.io": "https://teleportustomars.itch.io/clickbait"
@@ -208,6 +219,15 @@
       "logo": "orfu",
       "order": 6,
       "title": "Our Recipe for Unity",
+      "skills":[
+        "WordPress",
+        "Adobe Creative Suite",
+        "Balsamiq",
+        "HTML5",
+        "CSS3",
+        "Elementor",
+        "Google Analytics"
+      ],
       "subtitle": "Website design and marketing materials for a startup nonprofit",
       "description": "Contributed to formulation of business concepts for startup nonprofit. Researched culture, cuisine, and nonprofits to identify growth opportunities. Built custom website in WordPress on tight budget. Designed and posted marketing collateral with Adobe Photoshop, Illustrator, and InDesign.",
       "video": "sueVideo",
@@ -241,7 +261,14 @@
       "links": {
         "link": "https://joshwolper.github.io"
       },
-      "video": "joshVideo"
+      "video": "joshVideo",
+      "skills":[
+        "reactJS",
+        "HTML5",
+        "SASS",
+        "Git",
+        "Github pages"
+      ]
     },
     "magSite": {
       "className": "magSite",
@@ -251,7 +278,16 @@
       "subtitle": "wordpress-powered personal portfolio",
       "description": "In 2020, I built a personal portfolio for my artwork and other projects. I designed the site using Elementor and built it in WordPress.",
       "links": {},
-      "video": "mattVideo"
+      "video": "mattVideo",
+      "skills":[
+        "WordPress",
+        "Elementor",
+        "HTML5",
+        "CSS3",
+        "Adobe Creative Suite",
+        "Procreate",
+        "Affinity Photo"
+      ]
     }
   }
 }
