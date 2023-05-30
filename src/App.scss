@@ -228,7 +228,8 @@ html, body, #root, #App {
   flex-wrap: wrap;
 flex-direction: row;
 justify-content: center;
-font-size: .6rem
+font-size: .6rem;
+text-align: center !important;
 }
 
 #skill {
@@ -237,6 +238,8 @@ font-size: .6rem
   border-radius: 10px;
   margin: 1%;
   height: fit-content !important;
+  text-align: center !important;
+
 }
 
 
@@ -1277,6 +1280,19 @@ h2 {
 
 
 @media (max-width: 600px) {
+
+  #welcome {
+    height: 80% !important;
+  }
+  #selectedEduImage{
+      width: 60% !important;
+    }
+
+  #currentEduImage{
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
   .section {
     border-radius: 0 !important;
   }
@@ -1421,7 +1437,6 @@ h2 {
     grid-template-rows: 1fr !important;
     width: 100% !important;
     padding: 2% 0 2% 0 !important;
-    height: fit-content !important;
     padding: 2% 0 3% 0 !important;
   }
   #myInfoBlock {
