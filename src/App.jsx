@@ -477,7 +477,7 @@ function App() {
                   linkText="visit site"
                 />}
                 {project.className === "magSite" && <MySiteLink 
-                  link="https://mattalexander.gallery/alt"
+                  link="https://mattalexander.gallery/"
                   id="mySiteLink" 
                   linkText="visit my gallery"
                 />}
