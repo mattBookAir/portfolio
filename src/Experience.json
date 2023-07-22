@@ -9,7 +9,7 @@
     "phone": "267-393-3309"
   },
   "summary": "Driven by curiosity, I explore new possibilities and embrace challenges. As a child, I tinkered with electronics, fueling my desire to understand the world and create. Discovering art in my teens became my sanctuary, leading me to combine it with technology for immersive experiences. Early in my career, I mastered HTML, CSS, and WordPress, merging art and tech./ Recently, I delved into JavaScript and React, showcasing problem-solving abilities and passion for dynamic user interfaces. Now, I aim to collaborate with like-minded individuals and organizations, leveraging my diverse skill set for positive impact. With a proven track record and commitment to growth, I use technology to amplify ideas, spread creativity, and contribute to meaningful endeavors.",
-  "shortSummary": "Experienced and passionate designer and web developer with a background in art and a natural inclination for technology and progress",
+  "shortSummary": "Experienced and passionate product designer and developer with a natural inclination for technology and progress",
   "experience": [
     {
       "className": "webDev",
@@ -108,7 +108,7 @@
     "rite": {
       "className": "rite",
       "logo": "riteLogo",
-      "order": 6,
+      "order": 5,
       "title": "Rite",
       "subtitle": "2D Assets for a puzzle platformer game",
       "description": "In 2015, I worked in a small team to create the prototype of a 2D puzzle platformer game called Rite. I was responsible for creating the game's 2D assets, including the main character, enemies, and environment.",
@@ -127,7 +127,7 @@
     "SIGGRAPH": {
       "logo": "sigLogo",
       "className": "SIGGRAPH",
-      "order": 5,
+      "order": 6,
       "title": "SIGGRAPH Promotional Materials",
       "subtitle": "Video and print design for graphics researchers",
       "description": "In 2019 and 2020, I created scientific illustrations and promotional videos used for two separate official SIGGRAPH publications. I worked closely with the team's researchers to understand their work and create designs that effectively communicated their key findings.",
@@ -217,7 +217,7 @@
     "orfu": {
       "className": "orfu",
       "logo": "orfu",
-      "order": 6,
+      "order": 1,
       "title": "Our Recipe for Unity",
       "skills":[
         "WordPress",
@@ -254,7 +254,7 @@
     "joshSite": {
       "className": "joshSite",
       "logo": "joshLogo",
-      "order": 3,
+      "order":2,
       "title": "joshwolper.github.io",
       "subtitle": "Responsive website design for a graphics researcher",
       "description": "In 2023, I built joshwolper.github.io, a reponsive website built in ReactJS and hosted on GitHub Pages.",

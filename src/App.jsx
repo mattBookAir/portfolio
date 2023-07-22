@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import * as React from "react";
 import Experience from "./Experience.json";
 import "./App.scss";
-import headshot from "./headshot.png";
+// import headshot from "./headshot.png";
 import educationAnimation from "./guyz/eduGif.gif";
 import projectsAnimation from "./guyz/projectsGif.gif";
 import myInfoAnimation from "./guyz/me.gif";
@@ -12,7 +12,7 @@ import eduStill from "./guyz/eduStill.png";
 import expStill from "./guyz/experienceStill.png";
 import meStill from "./guyz/meStill.png";
 import projectsStill from "./guyz/projectsStill.png";
-import backgroundGrid from "./cardBg.png";
+// import backgroundGrid from "./cardBg.png";
 import expBg from "./guyz/expCard.png";
 import eduBg from "./guyz/eduCard.png";
 import meBg from "./guyz/aboutCard.png";
@@ -24,33 +24,33 @@ import orfu from "./orfu.png";
 import myLogo from "./myLogo.png";
 import sigLogo from "./sigLogo.png";
 import riteLogo from "./riteLogo.png";
-import chatBox from "./siteImages/chatBox.png";
-import grippy from "./siteImages/grippy.png";
-import liza from "./siteImages/liza.png";
-import login from "./siteImages/login.png";
-import vader from "./siteImages/vader.png";
+// import chatBox from "./siteImages/chatBox.png";
+// import grippy from "./siteImages/grippy.png";
+// import liza from "./siteImages/liza.png";
+// import login from "./siteImages/login.png";
+// import vader from "./siteImages/vader.png";
 import rabbit from "./siteImages/rabbit.jpg";
 import ccc from "./siteImages/ccc.jpg";
-import JoshCard from "./siteImages/JoshCard.png";
+import JoshCard from "./siteImages/JoshCard.jpg";
 import Dino from "./siteImages/dino.jpg";
-import flowchart from "./siteImages/flowchart.png";
-import mySiteScreenshot from "./mySiteScreenshot.png";
-import site1 from "./siteImages/site1.png";
-import site2 from "./siteImages/site2.png";
-import site3 from "./siteImages/site3.png";
-import site4 from "./siteImages/site4.png";
+import flowchart from "./siteImages/flowchart.jpg";
+// import mySiteScreenshot from "./mySiteScreenshot.png";
+import site1 from "./siteImages/site1.jpg";
+import site2 from "./siteImages/site2.jpg";
+import site3 from "./siteImages/site3.jpg";
+import site4 from "./siteImages/site4.jpg";
 import ad1 from "./schoolWork/ad1.jpg";
 import daAbstract from "./schoolWork/daAbstract.jpg";
-import daLogo from "./schoolWork/daLogo.png";
+// import daLogo from "./schoolWork/daLogo.png";
 import daPlan from "./schoolWork/daPlan.png";
-import leelah from "./schoolWork/leelah.jpg";
+// import leelah from "./schoolWork/leelah.jpg";
 import man from "./schoolWork/man.jpg";
 import woman from "./schoolWork/woman.jpg";
 import middle from "./schoolWork/middle.jpg";
 import mockup from "./schoolWork/mockup.png";
 import plan from "./schoolWork/plan.png";
 import ad2 from "./schoolWork/adNo2.png";
-import fullHeadshot from "./fullHeadshot.jpeg";
+// import fullHeadshot from "./fullHeadshot.jpeg";
 
 function App() {
   const experience = Experience.experience;
@@ -74,13 +74,13 @@ function App() {
   });
   const [showWelcome, setShowWelcome] = useState(true);
   const [isMobileSize, setIsMobileSize] = useState(null);
-  const [, setPrevSection] = useState(null);
+  // const [, setPrevSection] = useState(null);
   const projectImages = {
-    chatBox: chatBox,
-    grippy: grippy,
-    liza: liza,
-    login: login,
-    vader: vader,
+    // chatBox: chatBox,
+    // grippy: grippy,
+    // liza: liza,
+    // login: login,
+    // vader: vader,
     rabbit: rabbit,
     ccc: ccc,
     JoshCard: JoshCard,
@@ -111,13 +111,13 @@ function App() {
     woman: woman,
   };
 
-  const [dpi, setDpi] = useState(null);
+  const [, setDpi] = useState(null);
 
-  const handleDpiChange = () => {
-    console.log("dpi before change", window.devicePixelRatio);
-    const dpiValue = window.devicePixelRatio * 96; // 96 DPI is the standard for most screens
-    setDpi(dpiValue);
-  };
+  // const handleDpiChange = () => {
+  //   console.log("dpi before change", window.devicePixelRatio);
+  //   const dpiValue = window.devicePixelRatio * 96; // 96 DPI is the standard for most screens
+  //   setDpi(dpiValue);
+  // };
 
   useEffect(() => {
     const measureDpi = () => {
@@ -147,7 +147,7 @@ function App() {
         <div>
           <h1 id="welcomeText">Matt J Alexander</h1>
           <h2 id="welcomeText1">
-            Web Developer, Product Designer, and Digital Media Specialist
+            Product Designer / Developer & Digital Media Specialist
           </h2>
           <div id="welcomeText2">
             Select a card to learn more about me and my work.
@@ -479,7 +479,7 @@ function App() {
                 {project.className === "magSite" && <MySiteLink 
                   link="https://mattalexander.gallery/"
                   id="mySiteLink" 
-                  linkText="visit my gallery"
+                  linkText="visit gallery"
                 />}
                 {project.className === "clickbait" && <MySiteLink 
                   link="https://teleportustomars.itch.io/clickbait"
@@ -594,12 +594,12 @@ function App() {
         id="selectorButton"
         style={  isMobileSize ?
           (sectionRef===currentSection ? ({
-          backgroundImage: `url(${sectionCardBG})`,
+            backgroundColor: `black`,
         }) : ({
           backgroundColor: `black`,
         })) : (
           {
-            backgroundImage: `url(${sectionCardBG})`,
+            background: `black`,
           }
         )
           }

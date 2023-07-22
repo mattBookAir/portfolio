@@ -52,7 +52,8 @@ src: url('./HuskyStash.otf')}
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+            animation-duration: 0s !important;
     transition-duration: 0s !important;
     /* Add any other necessary properties to disable animations */
   }
@@ -220,7 +221,8 @@ html, body, #root, #App {
 
 #projectDescription {
   padding: 2% 3% 0 3%;
-  text-align-last: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
 }
 
 #skillsBox {
@@ -237,6 +239,8 @@ text-align: center !important;
   padding: 1%;
   border-radius: 10px;
   margin: 1%;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
   height: fit-content !important;
   text-align: center !important;
 
@@ -251,7 +255,12 @@ text-align: center !important;
 
 .projectLogo {
   width: 80%;
-  margin: 3% auto 3% auto;
+  margin: 3% auto 0 auto;
+}
+
+.clickbait .projectLogo  {
+  height: 80px !important;
+  margin: 3% auto 0 auto;
 }
 
 .joshSite h3 {
@@ -760,7 +769,7 @@ body {
 .card {
   overflow-x: visible;
     background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px) brightness(.2);
             backdrop-filter: blur(1px);
       border-radius: 7px;
 }
@@ -835,7 +844,8 @@ body {
   z-index: 100 !important;
   opacity: 0;
   height: 40vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 
@@ -1121,7 +1131,7 @@ body {
       // animation: pulse 5s ease-in-out alternate infinite;
       -webkit-backdrop-filter: multiply;
               backdrop-filter: multiply;
-      opacity: 0.2;
+      opacity: 0.06;
     }
 }
 
@@ -1314,7 +1324,8 @@ h2 {
  }
   .projectLogo {
     width: 90% !important;
-    object-fit: contain !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
   }
 
   .siteLink {
@@ -1323,7 +1334,8 @@ h2 {
 
   #myInfoParent {
     width: 100% !important;
-    animation: none !important;
+    -webkit-animation: none !important;
+            animation: none !important;
   }
 
   #sectionName {
@@ -1476,7 +1488,8 @@ h2 {
       content: '';
       display: none !important;
     }
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
 
   }
   #myPic {
@@ -1626,7 +1639,19 @@ transition: all 0.5s ease-in-out !important;
 }
 
 .slideInBr {
-  animation: slide-in-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-br 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+ @-webkit-keyframes slide-in-br {
+  0% {
+    transform: translateY(1000px) translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
 }
 
  @keyframes slide-in-br {
@@ -1641,19 +1666,23 @@ transition: all 0.5s ease-in-out !important;
 }
 
 #cardParent.experience {
-animation-delay: 0.2s !important;
+-webkit-animation-delay: 0.2s !important;
+        animation-delay: 0.2s !important;
 }
 
 #cardParent.projects {
-animation-delay: 0 !important;
+-webkit-animation-delay: 0 !important;
+        animation-delay: 0 !important;
 }
 
 #cardParent.myInfo {
-animation-delay: 0.4s !important;
+-webkit-animation-delay: 0.4s !important;
+        animation-delay: 0.4s !important;
 }
 
 #cardParent.education {
-animation-delay: 0.6s !important;
+-webkit-animation-delay: 0.6s !important;
+        animation-delay: 0.6s !important;
 }
 
 #myInfoParent {
@@ -1862,7 +1891,9 @@ height: 100%;}
   color: white;
   font-size: 1rem;
   line-height: 1.2rem;
-  padding: 0 2% 0 2%;
+  padding: 2%;
+  background-color: rgb(31, 31, 31);
+  border-radius: 20px;
 }
 
 .lightBoxGoAway {
@@ -1979,9 +2010,10 @@ height: 100%;}
   -webkit-animation: blur-in .4s ease-in-out forwards;
   animation: blur-in .4s ease-in-out forwards;
   opacity: 0;
-  height: 60vh;
+  height: 40vh;
   transition: all 0.5s ease-in-out;
   display: flex;
+  overflow: hidden;
   width: 60vw;
   flex-direction: row; 
   flex-wrap: nowrap;
@@ -2049,6 +2081,7 @@ height: 100%;}
 
 #lightbox {
   position: absolute;
+  background-color: rgba(57, 57, 57, 0.5);
   gap: 4%;
   top: 0;
   left: 0;
@@ -2058,8 +2091,8 @@ height: 100%;}
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px) brightness(.5);
+          backdrop-filter: blur(10px) brightness(.1);
   border-radius:30px;
   overflow: hidden;
   z-index: 1999;
@@ -2080,7 +2113,7 @@ height: 100%;}
   border-radius:5px 30px 30px 30px;
   -webkit-animation: blur-in .2s ease-out forwards;
           animation: blur-in .2s ease-out forwards;
-  height: 60vh;
+  height: 40vh;
   z-index: 2000 !important;
   display: flex;
   justify-content: center;
@@ -2095,6 +2128,13 @@ height: 100%;}
       -webkit-filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
               filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
 }
+
+}
+
+.orfuImage {
+  object-fit: contain;
+  filter: none !important;
+  box-shadow: none !important;
 
 }
 
@@ -2115,8 +2155,8 @@ height: 100%;}
 .clickbait, .webDev {
   -webkit-animation: blur-in .2s ease-in-out forwards;
           animation: blur-in .2s ease-in-out forwards;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
   opacity: 0;
 }
 
@@ -2161,7 +2201,7 @@ height: 100%;}
 
 .joshSite, .crm {
   -webkit-animation: blur-in .2s ease-in-out forwards;
-          animation: blur-in .2s ease-in-out forwards;  -webkit-animation-delay: 0.4s;  animation-delay: 0.4s;
+          animation: blur-in .2s ease-in-out forwards;  -webkit-animation-delay: 0.4s;  animation-delay: 0.3s;
   opacity:0;
 }
 
@@ -2185,7 +2225,7 @@ height: 100%;}
 .magSite,
 .orfu {
   -webkit-animation: blur-in .2s ease-in-out forwards;
-          animation: blur-in .2s ease-in-out forwards;  -webkit-animation-delay: 0.6s;  animation-delay: 0.6s;
+          animation: blur-in .2s ease-in-out forwards;  -webkit-animation-delay: 0.6s;  animation-delay: 0.2s;
   opacity:0;
 }
 
@@ -2293,7 +2333,8 @@ height: 100%;}
   font-family: DIN;
 }
 #selectorButtons {
-  animation: slide-from-bottom 0.5s ease-in-out forwards;
+  -webkit-animation: slide-from-bottom 0.5s ease-in-out forwards;
+          animation: slide-from-bottom 0.5s ease-in-out forwards;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -2323,6 +2364,15 @@ height: 100%;}
             filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.85));
     z-index: 1;}
 
+}
+
+@-webkit-keyframes slide-from-bottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 @keyframes slide-from-bottom {
@@ -2426,8 +2476,10 @@ height: 100%;}
   background-size: 25%;
   background-repeat: no-repeat;
   background-position: center;
-  animation: fade-in 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 200ms;
+  -webkit-animation: fade-in 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: fade-in 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
   &:before {
     background-image: url('./myLogo.png');
     opacity: 0.5;
@@ -2441,9 +2493,26 @@ height: 100%;}
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
-    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
-    animation-delay: 0 !important;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+            filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
+            animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
+    -webkit-animation-delay: 0 !important;
+            animation-delay: 0 !important;
+  }
+}
+
+
+ @-webkit-keyframes slide-in-elliptic-top-fwd {
+  0% {
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% 1400px;
+    opacity: 1;
   }
 }
 
@@ -2498,7 +2567,8 @@ height: 100%;}
   border-radius: 5px;
   box-shadow: 3px 2px 4px 0px rgba(0, 0, 0, 0.3);
   text-align: left;
-  text-align-last: left;
+  -moz-text-align-last: left;
+       text-align-last: left;
 }
 
 .title {
