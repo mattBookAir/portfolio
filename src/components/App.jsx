@@ -161,6 +161,7 @@ function App() {
           cardMatRef={cardMatRef}
           activateSection={activateSection}
           sectionPicRef={sectionPicRef}
+          sectionGifRef={sectionGifRef}
         />
         <SelectorButton
           sectionName="experience"
@@ -175,6 +176,8 @@ function App() {
           cardMatRef={cardMatRef}
           activateSection={activateSection}
           sectionPicRef={sectionPicRef}
+          sectionGifRef={sectionGifRef}
+
         />
         <SelectorButton
           sectionName="myInfo"
@@ -189,6 +192,7 @@ function App() {
           cardMatRef={cardMatRef}
           activateSection={activateSection}
           sectionPicRef={sectionPicRef}
+          sectionGifRef={sectionGifRef}
 
         />
         <SelectorButton
@@ -205,6 +209,8 @@ function App() {
           cardMatRef={cardMatRef}
           activateSection={activateSection}
           sectionPicRef={sectionPicRef}
+          sectionGifRef={sectionGifRef}
+
         />
       </div>
 

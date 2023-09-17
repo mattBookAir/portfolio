@@ -14,7 +14,8 @@ const SelectorButton = (props) => {
       isMobileSize,
       cardMatRef,
       activateSection,
-      sectionPicRef
+      sectionPicRef,
+      sectionGifRef
     } = props;
     const finalSectionName = (sectionName) => {
       if (sectionName === "myInfo") {
@@ -45,7 +46,7 @@ const SelectorButton = (props) => {
       if (currentSection === null) return;
       // Update position on mount and whenever currentSection or window size changes
       if (!isMobileSize) {
-        updatePositions(currentSection);
+        // updatePositions(currentSection);
         setTimeout(() => {
           currentSection.current.classList.add("cardActive");
         }, 500);
