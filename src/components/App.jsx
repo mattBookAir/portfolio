@@ -13,7 +13,6 @@ import ProjectsComp from "./projectsComp";
 import ExperienceComp from "./ExperienceComp";
 import EducationComp from "./EducationComp";
 
-
 //import styles
 import "/src/styles/App.scss";
 

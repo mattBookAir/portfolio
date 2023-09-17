@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import myLogo from "/src/assets/logos/myLogo.png";
 
 const SelectorButton = (props) => {
 
@@ -7,7 +8,6 @@ const SelectorButton = (props) => {
       sectionPicture,
       sectionRef,
       selectorClass,
-      sectionCardBG,
       sectionGif,
       currentSection,
       windowSize,
