@@ -124,14 +124,14 @@ const ProjectsComp = ( props ) => {
                 />}
                 {project.className === "rite" && <RiteIFrame />}
                 <div id="projectDescription">{project.description}</div>
-                {project.className === "SIGGRAPH" && <div id="links">
+                {/* {project.className === "SIGGRAPH" && <div id="links">
                   <a
                   target="_blank"
                   rel="noopener noreferrer" 
                   href={project.link1}>CD-MPM</a>
                   <a href={project.link2}
                   target="_blank" rel="noopener noreferrer">ANISO-MPM</a>
-                  </div>}
+                  </div>} */}
                 <div id="skillsBox">
                   {project.skills &&
                     project.skills.map((skill) => (
