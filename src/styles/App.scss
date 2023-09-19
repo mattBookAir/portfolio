@@ -204,10 +204,6 @@ src: url('/src/assets/fonts/HuskyStash.otf')}
   }
 }
 
-html, body, #root, #App {
-  overflow: hidden !important;
-}
-
 #projectSubtitle {
   font-family: "serifItalic";
 }
@@ -667,11 +663,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 2rem;
+  overflow-y: scroll;
 }
-
-
-
 
 body {
   display: flex;
@@ -811,10 +804,8 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   z-index: 100;
-  justify-content: center;
-  overflow: scroll;
-  align-items: center;
-  overflow-x: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 #particles-js {
   position: absolute;
@@ -1090,39 +1081,21 @@ body {
 
 #App {
   display: grid;
-  grid-template-columns: 10vw 90vw;
+  grid-template-columns: 15vw 90vw;
   grid-template-rows: 1fr;
   grid-template-areas: 
     "hand field";
-  // justify-content: flex-start;
-  // align-items: flex-start;
   background: white;
   color: $color_1;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   position: relative;
-  overflow: hidden;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  align-content: flex-start;
   z-index: 1;
   background-color: rgba(0,0,0,0.5);
-
-  &:before {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-size: cover;
-      // animation: pulse 5s ease-in-out alternate infinite;
-      -webkit-backdrop-filter: multiply;
-              backdrop-filter: multiply;
-      opacity: 0.06;
-    }
+  overflow-y: visible;
 }
-
-
 
 .colorBox {
   position: absolute;
@@ -1272,7 +1245,12 @@ h2 {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+  #App {
+    display: flex !important;
+    flex-direction: column;
+  }
 
   #welcome {
     height: 80% !important;
@@ -1291,7 +1269,18 @@ h2 {
   }
 
   #selectorButtons {
-    height: 15vh !important;
+    height: 10vh !important;
+    flex-direction: row !important;
+      #selectorButton {
+        height: 100% !important;
+        .activeCard {
+          height: 150px !important;
+        }
+      }
+  }
+
+  #secondSideBar {
+    flex-direction: row !important;
   }
 
   #shortBio {
@@ -1598,8 +1587,8 @@ transition: all 0.5s ease-in-out !important;
 
 #selectorButton {
   margin: auto;
-  width: 200px;
-  height: 300px ;
+  width: 100%;
+  min-height: 250px;
   background-size: cover;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
@@ -1609,7 +1598,7 @@ transition: all 0.5s ease-in-out !important;
   color: $color_2;
   font-weight: bold;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -2262,11 +2251,13 @@ height: 100%;}
   left: 0;
   right: 0;
   bottom: 0;
+  height: 100vh;
 }
 
 #topRow {
   display: flex;
 }
+
 #projects {
   font-family: $font-family_2;
   font-weight: bold;
@@ -2274,7 +2265,8 @@ height: 100%;}
   flex-direction: row;
   gap: 0;
   justify-content: space-between;
-  
+  overflow-y: scroll;
+  height: 100%;
 }
 
 #activeSection {
@@ -2313,19 +2305,15 @@ height: 100%;}
   grid-area: hand;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
-  min-height: fit-content;
-  overflow: visible;
-  position: absolute;
-  top: 0;
-  left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
   transition: all 0.5s ease-in-out;
-  padding-right: 2%;
   z-index: 100;
-
-  &:before{content: "";
+  &:before{
+    content: "";
     position: absolute;
     top: 0;
     left: 0;

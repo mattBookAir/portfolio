@@ -13,6 +13,7 @@ import site1 from "/src/assets/siteImages/site1.jpg";
 import site2 from "/src/assets/siteImages/site2.jpg";
 import site3 from "/src/assets/siteImages/site3.jpg";
 import site4 from "/src/assets/siteImages/site4.jpg";
+import Project from "./Project"
 
 const ProjectsComp = (props) => {
   const projectImages = {
@@ -76,84 +77,10 @@ const ProjectsComp = (props) => {
     );
   };
 
-  const ActiveSection = () => {
-    return (
-      <div id="activeSection">
-        <h1>Project</h1>
-      </div>
-    );
-  };
-
-  const MappedProjects = Object.values(projects)
-    .sort((a, b) => a.order - b.order)
-    .map((project, index) => (
-      <div className={project.className} id="project" key={index}>
-        {project.images && selectedImages[project.className].image && (
-          <Lightbox
-            selectedImages={selectedImages}
-            selectedImage={selectedImages[project.className]}
-            setSelectedImages={setSelectedImages}
-            projectName={project.className}
-            imgObject={projectImages}
-            closeAction={() => {
-              setSelectedImages({
-                ...selectedImages,
-                [project.className]: { image: null, caption: null },
-              });
-            }}
-          />
-        )}
-        {project.className === "cardGame" && <h2>{project.title}</h2>}
-        {project.logo && (
-          <img className="projectLogo" src={logos[project.logo]} />
-        )}
-        <div id="projectSubtitle">{project.subtitle}</div>
-        {project.images && (
-          <ProjImages
-            images={project.images}
-            projectIndex={index}
-            projectName={project.className}
-            imgSrc={projectImages}
-            activateSelectedImage={activateSelectedImage}
-          />
-        )}
-        {project.className === "joshSite" && (
-          <MySiteLink
-            link="https://joshwolper.github.io"
-            id="joshSiteLink"
-            linkText="visit site"
-          />
-        )}
-        {project.className === "magSite" && (
-          <MySiteLink
-            link="https://mattalexander.gallery/"
-            id="mySiteLink"
-            linkText="visit gallery"
-          />
-        )}
-        {project.className === "clickbait" && (
-          <MySiteLink
-            link="https://teleportustomars.itch.io/clickbait"
-            id="cbLink"
-            linkText="visit game"
-          />
-        )}
-        <div id="projectDescription">{project.description}</div>
-        <div id="skillsBox">
-          {project.skills &&
-            project.skills.map((skill) => (
-              <div id="skill" key={skill}>
-                {skill}
-              </div>
-            ))}
-        </div>
-      </div>
-    ));
-
   return (
     <div id="projects" className="section" ref={scrollRef}>
       <SecondSideBar />
-      <ActiveSection />
+      <Project />
     </div>
   );
 };

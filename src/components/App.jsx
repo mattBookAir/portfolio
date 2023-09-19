@@ -142,7 +142,6 @@ function App() {
 
   return (
     <div id="App">
-      {showWelcome && <Welcome />}
       <SelectorButtons />
       <div id="playingField">
           <Outlet />
