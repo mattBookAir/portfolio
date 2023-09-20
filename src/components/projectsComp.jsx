@@ -1,8 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Experience from "/src/Experience.json";
-import ProjImages from "./ProjImages";
-import MySiteLink from "./MySiteLink";
-import Lightbox from "./Lightbox";
+import { Link } from "react-router-dom";
 import clickbaitLogo from "/src/assets/logos/clickbaitLogo.png";
 import joshLogo from "/src/assets/logos/joshLogo.png";
 import oldSiteLogo from "/src/assets/logos/oldSiteLogo.png";
@@ -57,7 +55,7 @@ const ProjectsComp = (props) => {
         {Object.values(projects)
           .sort((a, b) => a.order - b.order)
           .map((project, index) => (
-            <div className={project.className} id="project" key={index}>
+            <Link to={`/portfolio/projects/${project.className}`} className={project.className} id="project" key={index}>
               <h2>{project.title}</h2>
               {project.logo && (
                 <img className="projectLogo" src={logos[project.logo]} />
@@ -71,7 +69,7 @@ const ProjectsComp = (props) => {
                     </div>
                   ))}
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     );
