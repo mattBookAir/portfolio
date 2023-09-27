@@ -39,28 +39,28 @@ function App() {
   // const [, setPrevSection] = useState(null);
   const [, setDpi] = useState(null);
 
-  useEffect(() => { //set dpi
-    const measureDpi = () => {
-      const div = document.createElement('div');
-      div.style.width = '1in'; // Set the width to 1 inch
-      div.style.visibility = 'hidden';
-      document.body.appendChild(div);
+  // useEffect(() => { //set dpi
+  //   const measureDpi = () => {
+  //     const div = document.createElement('div');
+  //     div.style.width = '1in'; // Set the width to 1 inch
+  //     div.style.visibility = 'hidden';
+  //     document.body.appendChild(div);
 
-      const dpiValue = div.offsetWidth; // Obtain the width in pixels
-      document.body.removeChild(div);
+  //     const dpiValue = div.offsetWidth; // Obtain the width in pixels
+  //     document.body.removeChild(div);
 
-      setDpi(dpiValue);
-      console.log("dpi", dpiValue);
-    };
+  //     setDpi(dpiValue);
+  //     console.log("dpi", dpiValue);
+  //   };
 
-    measureDpi();
+  //   measureDpi();
 
-    window.addEventListener('resize', measureDpi);
+  //   window.addEventListener('resize', measureDpi);
 
-    return () => {
-      window.removeEventListener('resize', measureDpi);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', measureDpi);
+  //   };
+  // }, []);
 
   const handleResize = () => {
     setWindowSize({
@@ -69,16 +69,16 @@ function App() {
     });
   };
 
-  useEffect(() => { //set isMobileSize
-    if (window.innerWidth < 600) {
-      setIsMobileSize(true);
-    } else {
-      setIsMobileSize(false);
-    }
-    console.log("mobile is", isMobileSize);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [windowSize]);
+  // useEffect(() => { //set isMobileSize
+  //   if (window.innerWidth < 600) {
+  //     setIsMobileSize(true);
+  //   } else {
+  //     setIsMobileSize(false);
+  //   }
+  //   console.log("mobile is", isMobileSize);
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, [windowSize]);
   console.log("currentComp is", currentComp);
 
 

@@ -7,19 +7,16 @@ import oldSiteLogo from "/src/assets/logos/oldSiteLogo.png";
 import orfu from "/src/assets/logos/orfu.png";
 import sigLogo from "/src/assets/logos/sigLogo.png";
 import riteLogo from "/src/assets/logos/riteLogo.png";
-import site1 from "/src/assets/siteImages/site1.jpg";
-import site2 from "/src/assets/siteImages/site2.jpg";
-import site3 from "/src/assets/siteImages/site3.jpg";
-import site4 from "/src/assets/siteImages/site4.jpg";
-import Project from "./Project"
 
-const ProjectsComp = (props) => {
-  const projectImages = {
-    site1: site1,
-    site2: site2,
-    site3: site3,
-    site4: site4,
-  };
+const ProjectsComp = () => {
+
+  const projectsList = [
+    "orfu",
+    "portfolio",
+    "clickbait",
+    "joshSite"
+  ]
+
   const logos = {
     clickbaitLogo: clickbaitLogo,
     joshLogo: joshLogo,

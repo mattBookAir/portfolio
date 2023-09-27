@@ -211,7 +211,7 @@
       "logo": "oldSiteLogo",
       "order": 4,
       "title": "mattalexander.gallery",
-      "subtitle": "wordpress-powered personal portfolio",
+      "subtitle": "my journey through art and technology",
       "description": "In 2020, I built a personal portfolio for my artwork and other projects. I designed the site using Elementor and built it in WordPress.",
       "links": {},
       "video": "mattVideo",
@@ -222,7 +222,12 @@
         "CSS3",
         "Adobe Creative Suite",
         "Procreate",
-        "Affinity Photo"
+        "Affinity Photo",
+        "reactJS",
+        "HTML5",
+        "SASS",
+        "Git",
+        "Github pages"
       ]
     }
   }
