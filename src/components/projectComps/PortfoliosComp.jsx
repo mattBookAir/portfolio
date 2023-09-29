@@ -1,4 +1,4 @@
-export const PortComp = () => {
+export const PortfoliosComp = () => {
   return (
     <div>
       <p>

@@ -299,26 +299,6 @@ width: 100% !important;
   text-transform: uppercase !important;
 }
 
-
-
-// .color1 {
-//   box-shadow: shadow(purple);
-//   -webkit-animation: hueRotate 10s 0s linear infinite, color1 19s 0s linear infinite;
-//           animation: hueRotate 10s 0s linear infinite, color1 19s 0s linear infinite;
-// }
-
-// .color2 {
-//   box-shadow: shadow(blue);
-//   -webkit-animation: hueRotate 15s 0s linear infinite, color2 25s 0s linear infinite;
-//           animation: hueRotate 15s 0s linear infinite, color2 25s 0s linear infinite;
-// }
-
-// .color3 {
-//   box-shadow: shadow(red);
-//   -webkit-animation: hueRotate 20s 0s linear infinite, color3 15s 0s linear infinite;
-//           animation: hueRotate 20s 0s linear infinite, color3 15s 0s linear infinite;
-// }
-
 @-webkit-keyframes pulse {
   0% {
     transform: scale(1);
@@ -543,6 +523,15 @@ width: 100% !important;
             filter: blur(0px);
     opacity: 1;
   }
+}
+
+.projectContent {
+  width: 100%;
+  word-wrap: break-word;
+  padding: .75%;
+  margin: .75%;
+  background-color: red;
+  height: fit-content;
 }
 
 #activeCard {
@@ -1116,7 +1105,7 @@ body {
 
 #App {
   display: grid;
-  grid-template-columns: 15vw 90vw;
+  grid-template-columns: 15vw 85vw;
   grid-template-rows: 1fr;
   grid-template-areas: 
     "hand field";

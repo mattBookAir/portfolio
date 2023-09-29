@@ -1,9 +1,37 @@
-
+//import images, starting with brand dev
+import colorPallettes from "/src/assets/projects/orfu/brandDev/colorPallettes.png";
+import concept1 from "/src/assets/projects/orfu/brandDev/concept1.png";
+import concept2 from "/src/assets/projects/orfu/brandDev/concept2.png";
+import concept3 from "/src/assets/projects/orfu/brandDev/concept3.png";
+import concept4 from "/src/assets/projects/orfu/brandDev/concept4.png";
+//import devPages
+import donateCS from "/src/assets/projects/orfu/devPages/donateComingSoon.png";
+import hpV1 from "/src/assets/projects/orfu/devPages/hpV1.png";
+//import graphics
+import conceptCompare from "/src/assets/projects/orfu/graphics/conceptCompare.png";
+import conceptDiagram from "/src/assets/projects/orfu/graphics/conceptDiagram.png";
+import hybridIcon from "/src/assets/projects/orfu/graphics/hybridIcon.png";
+import infographicSmall from "/src/assets/projects/orfu/graphics/infographicSmall.png";
+import infographic2 from "/src/assets/projects/orfu/graphics/infographic2.png";
+//import mockups
+import aboutMockup from "/src/assets/projects/orfu/mockups/aboutMockup.jpg";
+import learnPage from "/src/assets/projects/orfu/mockups/learnPage.png";
+//import sitemaps
+import sitemap from "/src/assets/projects/orfu/sitemaps/sitemap.png";
+import siteChart from "/src/assets/projects/orfu/sitemaps/siteChart.png";
+//import wireframes
+import factSheetFrame from "/src/assets/projects/orfu/wireframes/factSheetFrame.png";
+import infoPageFrame from "/src/assets/projects/orfu/wireframes/infoPageFrame.png";
+import recipeDetailsFrame from "/src/assets/projects/orfu/wireframes/recipeDetailsFrame.png";
+import recipeSubFrame from "/src/assets/projects/orfu/wireframes/recipeSubFrame.png";
+import storyFrame from "/src/assets/projects/orfu/wireframes/storyFrame.png";
+import storyOnlyFrame from "/src/assets/projects/orfu/wireframes/storyOnlyFrame.png";
+import surveyConceptFrame from "/src/assets/projects/orfu/wireframes/surveyConceptFrame.png";
+import toolkitConceptFrame from "/src/assets/projects/orfu/wireframes/toolkitConceptFrame.png";
 
 export const OrfuComp = () => {
     return (
-      <div>
-        <h1>Project Overview</h1>
+      <div className="projectContent">
         <p>
           The founder of this nonprofit, when she founded it, knew only that she
           wanted to combine food and conversation in a way that would inspire
@@ -20,7 +48,6 @@ export const OrfuComp = () => {
           interesting food-related tale), and b) allow users to easily connect
           with other people who saw Our Recipe for Unity&apos;s vision.
         </p>
-        <h1>Project Scope</h1>
         <p>
           Our mission was “To address division in America by promoting and
           fostering compassion, empathy and civil discourse using food as a
@@ -32,7 +59,6 @@ export const OrfuComp = () => {
           calm and curiosity in our users. Furthermore, we needed it to be
           buildable and manageable by three people on a very small budget.
         </p>
-        <h1>Technologies Used</h1>
         <ul>
           <li>Adobe Creative Suite and Balsamiq for prototyping</li>
           <li>
@@ -41,7 +67,6 @@ export const OrfuComp = () => {
           </li>
           <li>SiteGround backendGoDaddy domain hosting</li>
         </ul>
-        <h1>Design Process</h1>
         <p>
           The first thing we did, as a few people with little website
           experience, was to find and crawl through other websites that featured
@@ -55,7 +80,6 @@ export const OrfuComp = () => {
           team had the most collective experience at the time, while working
           concurrently on branding the business.
         </p>
-        <h1>Development Process</h1>
         <p>
           The development process started with my learning anything about HTML
           and CSS, which I did through freecodecamp. It was then out of the
@@ -73,7 +97,6 @@ export const OrfuComp = () => {
           a very fuzzy goal, and we kept working on parts of the site until we
           felt it was ready to test.
         </p>
-        <h1>Key Challenges</h1>
         <ul>
           <li>
             Manpower: with such a small team, many shortcuts had to be taken,
@@ -90,7 +113,6 @@ export const OrfuComp = () => {
             for the sake of having a prototype ready to test.
           </li>
         </ul>
-        <h1>Testing</h1>
         <p>
           Other than Googling “best practice for ___”, we relied largely on
           intuition for quality assurance. With little experience and even less
@@ -98,7 +120,6 @@ export const OrfuComp = () => {
           around 50 people to test a private version of the site and to provide
           feedback that we would incorporate prior to launch.
         </p>
-        <h1>Notable Features</h1>
         <p>
           I particularly liked creating the dynamic sidebar, which, when you
           navigated to a new page on the website, would provide both a new quote
@@ -106,14 +127,12 @@ export const OrfuComp = () => {
           feature, which allowed users to search recipes by course, cuisine,
           region of the USA, relevant holidays, tags, states, and keywords.
         </p>
-        <h1>Project Outcome</h1>
         <p>
           The website was launched in August of 2019, shortly before the
           expiration of my contract, and the business drew some attention from
           other nonprofits and local media outlets before going on hiatus in
           2021.
         </p>
-        <h1>Personal Reflection</h1>
         <p>
           This project really started my journey as a web designer and
           developer, as I don&apos;t know if I&apos;d have even known about it
@@ -125,12 +144,10 @@ export const OrfuComp = () => {
           goals and complete more of our desired features if I had full
           Javascript control. However, I&apos;m proud of it.
         </p>
-        <h1>Future Plans</h1>
         <p>
           The website does not belong to me, and it is currently on hiatus, as
           the executive director returned to school.
         </p>
-        <h1>Impact</h1>
         <p>
           While the site was up for only around two years, it garnered
           respectable attention, and the executive director plans to boot the
