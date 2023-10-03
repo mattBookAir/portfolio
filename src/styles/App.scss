@@ -253,10 +253,10 @@ src: url('/src/assets/fonts/HuskyStash.otf')}
 #skillsBox {
   display: flex;
   flex-wrap: wrap;
-flex-direction: row;
-justify-content: center;
-font-size: .6rem;
-text-align: center !important;
+  flex-direction: row;
+  justify-content: center;
+  font-size: .6rem;
+  text-align: center !important;
 }
 
 #skill {
@@ -268,10 +268,27 @@ text-align: center !important;
   height: -moz-fit-content !important;
   height: fit-content !important;
   text-align: center !important;
-
 }
 
+.articlePic {
+  width: 100%;
+}
 
+#orfu {
+  .picCarousel {
+    img {
+      width: 400px;
+      height: 200px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+}
+
+#rfu1 {
+  display: flex;
+  flex-direction: row;
+}
 
 .clickbait h3 {
   font-family: 'clickbait';
@@ -285,10 +302,6 @@ width: 100% !important;
     width: 100% !important;
   }
 }
-
-// .clickbait .projectLogo  {
-//   height: 80px !important;
-// }
 
 .joshSite h3 {
   font-family: "joshFont";
