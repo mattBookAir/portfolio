@@ -1,3 +1,5 @@
+//import react elements
+import { useRef, useEffect, useState } from "react";
 //import images, starting with brand dev
 import colorPallettes from "/src/assets/projects/orfu/brandDev/colorPallettes.png";
 import concept1 from "/src/assets/projects/orfu/brandDev/concept1.png";
@@ -29,8 +31,13 @@ import storyFrame from "/src/assets/projects/orfu/wireframes/storyFrame.png";
 import storyOnlyFrame from "/src/assets/projects/orfu/wireframes/storyOnlyFrame.png";
 import surveyConceptFrame from "/src/assets/projects/orfu/wireframes/surveyConceptFrame.png";
 import toolkitConceptFrame from "/src/assets/projects/orfu/wireframes/toolkitConceptFrame.png";
-//import carousel component
+//import screenshots
+import mobileSS from "/src/assets/projects/orfu/screenshots/mobile.png";
+import desktopSS from "/src/assets/projects/orfu/screenshots/desktop.png";
+//import components
 import PicCarousel from "/src/components/PicCarousel";
+import Frame from "/src/components/Frame";
+
 
 export const OrfuComp = () => {
   const logos = [
@@ -40,24 +47,35 @@ export const OrfuComp = () => {
     concept4,
     finalLogo,
   ]
+
   return (
-    <div className="projectContent" id="orfu">
-      <p className="projectP" id="rfu1">
-        The founder of this nonprofit knew only that she wanted to combine food
-        and conversation in a way that would inspire empathy, and that she
-        wanted to work with me to do it. As we developed our ideas and
-        methodologies, as well as the feasible scale of creating and
-        distributing materials as a team of three people, the idea shifted from
-        being a magazine to being a website to 1) be able to more efficiently
-        distribute individual parts of what would have been the magazine, such
-        as featured articles, tips, and fact sheets, and 2) to allow both a)
-        user-generated content (through submitted recipes and stories about, for
-        instance, connecting over food, or sharing an interesting food-related
-        tale), and b) allow users to easily connect with other people who saw
-        Our Recipe for Unity&apos;s vision.
-        <img className="articlePic" id="conceptCompare" src={conceptCompare} alt="" />
-      </p>
-      <PicCarousel images={logos} />
+    <section className="projectContent" id="orfu">
+      <Frame mobileSS={mobileSS}/>
+      <section className="projectHeader">
+        <img className="headerLogo" src={finalLogo} />
+        <div>
+          {/* <h1 className="projectTitle">Our Recipe for Unity</h1> */}
+          <h2 className="projectSubtitle">A website for a nonprofit</h2>
+        </div>
+      </section>
+      <section className="r-pic-big-l-text">
+        <p className="projectP" id="rfu1">
+          The founder of this nonprofit knew only that she wanted to combine food
+          and conversation in a way that would inspire empathy, and that she
+          wanted to work with me to do it. As we developed our ideas and
+          methodologies, as well as the feasible scale of creating and
+          distributing materials as a team of three people, the idea shifted from
+          being a magazine to being a website to 1) be able to more efficiently
+          distribute individual parts of what would have been the magazine, such
+          as featured articles, tips, and fact sheets, and 2) to allow both a)
+          user-generated content (through submitted recipes and stories about, for
+          instance, connecting over food, or sharing an interesting food-related
+          tale), and b) allow users to easily connect with other people who saw
+          Our Recipe for Unity&apos;s vision.
+        </p>
+        <img className="articlePic" id="conceptCompare" src={conceptDiagram} alt="" />
+
+      </section>
       <p>
         Our mission was “To address division in America by promoting and
         fostering compassion, empathy and civil discourse using food as a
@@ -79,6 +97,7 @@ export const OrfuComp = () => {
         had the most collective experience at the time, while working
         concurrently on branding the business.
       </p>
+      <PicCarousel images={logos} />
       <p>
         We used the following technologies to build the site:
         <ul>
@@ -143,6 +162,6 @@ export const OrfuComp = () => {
           https://orfu.org/
         </a>
       </p>
-    </div>
+    </section>
   );
 };

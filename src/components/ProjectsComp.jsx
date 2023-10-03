@@ -34,19 +34,19 @@ const ProjectsComp = () => {
               id="project"
               key={index}
             >
-              <h2>{project.title}</h2>
+              {/* <h2>{project.title}</h2> */}
               {project.logo && (
                 <img className="projectLogo" src={logos[project.logo]} />
               )}
               <div id="projectSubtitle">{project.subtitle}</div>
-              <div id="skillsBox">
+              {/* <div id="skillsBox">
                 {project.skills &&
                   project.skills.map((skill) => (
                     <div id="skill" key={skill}>
                       {skill}
                     </div>
                   ))}
-              </div>
+              </div> */}
             </Link>
           ))}
       </div>
