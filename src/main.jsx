@@ -8,8 +8,6 @@ import {
 import "./styles/index.css";
 import MyInfo from "./components/MyInfo";
 import ProjectsComp from "./components/ProjectsComp.jsx";
-import ExperienceComp from "./components/ExperienceComp";
-import EducationComp from "./components/EducationComp";
 import { OrfuComp } from "./components/projectComps/OrfuComp";
 import { CbComp } from "./components/projectComps/CbComp";
 import { JoshComp } from "./components/projectComps/JoshComp";
@@ -43,14 +41,6 @@ const router = createBrowserRouter([
             element: <PortfoliosComp />,
           }
         ]
-      },
-      {
-        path: "/portfolio/experience",
-        element: <ExperienceComp />,
-      },
-      {
-        path: "/portfolio/education",
-        element: <EducationComp />,
       },
       {
         path: "/portfolio/myInfo",

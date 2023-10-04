@@ -1,16 +1,16 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef } from "react";
 
 const Frame = (props) => {
   const { mobileSS } = props;
-  const frameRef = useRef(null);
-
-//   useEffect(() => {
-//     // Update background position using the 'style' property
-//     frameRef.current.style.backgroundPositionY = `${-scrollY * 0.5}px`;
-//   }, [scrollY]);
+  const ref = useRef(null);
 
   return (
-    <div id="frame" ref={frameRef} style={{ backgroundImage: `url(${mobileSS})` }}>
+    <div id="frame" ref={ref}>
+      <div
+        id="frameImage"
+        style={{ backgroundImage: `url(${mobileSS})` }}
+      >
+      </div>
     </div>
   );
 };

@@ -1,3 +1,4 @@
+// import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const SelectorButton = (props) => {
@@ -6,7 +7,8 @@ const SelectorButton = (props) => {
       sectionName,
       sectionRef,
       sectionGif,
-      sectionPicRef,
+      sectionPicture,
+      
     } = props;
 
     const finalSectionName = (sectionName) => {
@@ -23,19 +25,12 @@ const SelectorButton = (props) => {
         to={`/portfolio/${sectionName}`}
         id="selectorButton"
         ref={sectionRef}
-        onMouseEnter={() => {
-          sectionRef.current.classList.add("glow");
-        }}
-        onMouseLeave={() => {
-          sectionRef.current.classList.remove("glow");
-        }}
       >
        <div className="card" id="cardParent">
           <div id="sectionName">{finalSectionName(sectionName)}</div>
           <img
             id="sectionPic"
-            ref={sectionPicRef}
-            src={sectionGif}
+            src={sectionPicture}
             alt="Section"
           />
         </div>
