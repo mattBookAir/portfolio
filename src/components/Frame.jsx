@@ -1,14 +1,14 @@
 import { useRef } from "react";
 
 const Frame = (props) => {
-  const { mobileSS } = props;
+  const { screenshot, mobile } = props;
   const ref = useRef(null);
 
   return (
-    <div id="frame" ref={ref}>
+    <div className={mobile ? 'mobileFrame' : 'frame'} ref={ref}>
       <div
-        id="frameImage"
-        style={{ backgroundImage: `url(${mobileSS})` }}
+        className={mobile ? 'mobileFrameImage' : 'frameImage'}
+        style={{ backgroundImage: `url(${screenshot})` }}
       >
       </div>
     </div>
