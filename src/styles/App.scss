@@ -1,7 +1,9 @@
-$color_1: black;
-$color_2: white;
-$color_3: #1f75fe;
-$color_4: rgba(255, 255, 0);
+$color_1: #191D32;
+$color_2: #f7F7ff;
+$color_3: #453A49;
+$color_4: #6D3B47;
+$color_5: #282F44;
+$color_6: #BA2C73;
 $font-family_1: Times;
 $font-family_2: "ygo";
 $background-color_1: rgba(255, 255, 255, 0.6);
@@ -256,9 +258,6 @@ $joshBlue: rgb(72, 172, 240);
 
   #myName {
     font-size: 1.5rem !important;
-  }
-  #skillsBox {
-    margin-bottom: 5% !important;
   }
   .projectLogo {
     width: 100% !important;
@@ -631,34 +630,6 @@ $joshBlue: rgb(72, 172, 240);
   color: $joshBlue;
 }
 
-#projectDescription,
-p,
-.section,
-#skillsBox {
-  font-family: "DIN light";
-  font-weight: 400;
-  font-size: 0.6rem;
-}
-
-#skillsBox {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 0.6rem;
-  text-align: center !important;
-}
-
-#skill {
-  background: rgba(0, 0, 255, 0.2);
-  padding: 1%;
-  border-radius: 10px;
-  margin: 1%;
-  height: -webkit-fit-content !important;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
-  text-align: center !important;
-}
 
 .articlePic {
   width: 100%;
@@ -666,14 +637,50 @@ p,
 }
 
 #orfu {
-  .picCarousel {
-    img {
+
+  p {
+    font-family: "DIN light" !important;
+    font-weight: 100 !important;
+    line-height: 2rem !important;
+    color: $color_2;
+    font-size: 1rem !important;
+  }
+
+  #orfuContent1 {
+    padding-top: 2%;
+  }
+
+  #orfuContent2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #orfuContent3 {
+    display: flex;
+    flex-direction: row-reverse;
+
+  }
+
+  #orfuContentInner {
+    width: 50%;
+  }
+
+  #orfuFrames {
+    width: 50%;
+  }
+
+  #orfuLogos.picCarousel {
+     img {
       width: 400px;
       height: 200px;
       object-fit: contain;
       object-position: center;
     }
   }
+}
+
+.picCarousel {
+  width: fit-content;
 }
 
 #rfu1 {
@@ -717,7 +724,7 @@ p,
   margin-top: 0;
   position: fixed;
   top: -10%;
-  z-index: 1;
+  z-index: 100;
   left: 20vw;
   right: 0;
   transition: all 0.2s ease-out !important;
@@ -737,9 +744,6 @@ body {
 
 .card {
   overflow-x: visible;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(1px) brightness(0.2);
-  backdrop-filter: blur(1px);
   border-radius: 7px;
 }
 
@@ -754,15 +758,16 @@ body {
 .projectContent {
   word-wrap: break-word;
   border-radius: 1.5px;
-  padding: 5% 2%;
-  margin: 5%;
-  background-color: white;
-  color: darkgrey;
+  padding: 2%;
+  margin: 2%;
+  background-color: $color_5;
+  color: $color_2 !important;
   height: fit-content;
   position: absolute;
   top: 0;
   left: 0;
   animation: slide-up-from-bottom 0.2s ease-out;
+  border-radius: 15px 15px 0 0;
 }
 
 #three-pic-h {
@@ -806,13 +811,17 @@ body {
 .projectHeader {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: 10%;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: center;
   align-content: center;
   align-items: center;
-  color: black !important;
-  .headerLogo {
-    width: 40%;
+  font-size: 1rem;
+  border-bottom: 2px solid $color_2;
+  .picCarousel {
+    width: 250px;
+    margin-left: 2%;
+    mix-blend-mode: color-burn;
   }
 }
 
@@ -825,21 +834,27 @@ body {
   cursor: pointer;
   width: fit-content;
   display: grid;
-  outline: 2px solid red;
   grid-template-areas:
     "visitText visitText"
     "monitor monitor";
   padding: 1%;
   border-radius: 2px;
-  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.5);
   transition: all 0.1s ease-in-out;
+  background: $color_3;
     &:hover {
-      transform: scale(1.05);
+      background: red;
       * {
         animation-play-state: running;
       }
     }
-  
+    #visitBlock {
+      height: 50px;
+      font-family: "DIN Light";
+      font-weight: 100;
+      font-size: 1rem;
+      color: white;
+    }
+
 }
 
 .mobileFrame {
@@ -894,7 +909,6 @@ body {
   animation-play-state: paused;
   transition: all 0.2s ease-out;
   position: relative;
-  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.8);
 
 }
 
@@ -916,8 +930,6 @@ body {
 }
 
 .frameImage {
-  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.6);
-
   width:100%;
   height: 100%;
   background-size: cover;
@@ -970,25 +982,24 @@ body {
 
 #projectSubtitle {
   h2 {
-    color: black !important;
   }
 }
 
 .card {
   overflow: hidden !important;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    height: 95%;
-    border: 1px solid #999;
-    box-sizing: border-box;
-    border-radius: 5px;
-  }
+  background-color: $color_4;
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 95%;
+  //   height: 95%;
+  //   border: 1px solid #999;
+  //   box-sizing: border-box;
+  //   border-radius: 5px;
+  // }
 }
 
 #projectOutlet {
@@ -1042,29 +1053,78 @@ body {
 }
 
 #project {
+  position: relative;
   display: flex;
-  width: 150px;
-  height: 150px;
-  flex-direction: column !important;
-  justify-content: flex-end;
-  align-items: flex-start;
-  align-content: flex-start;
+  width: 20%;
+  height: 100px;
+  flex-direction: column-reverse !important;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-end;
   gap: 1rem;
   background: $color_4;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0px 0px 10px 10px;
   padding: 1rem;
+  padding-top: 2%;
   transition: all 0.2s ease-out !important;
   text-align: center;
+  z-index: 1000 !important;
+  img {
+    height: 60px;
+    max-height: 60px;
+    max-width: 150px;
+    object-fit: contain;
+    transition: all 0.2s ease-in-out !important;
+  }
   &:hover {
+    img {
+      max-height: unset;
+      max-width: unset;
+      height: 100px !important;
+      width: 100% !important;
+      transition: all 0.2s ease-in-out !important;
+    }
     transform: translateY(30%) !important;
+    height: 180px;
     transition: all 0.2s ease-out !important;
+    box-shadow: 0px 0px 60px $color_6, inset 0px 0px 10px $color_2, 0px 0px 5px $color_2;
+  }
+  #skillsBox {
+    font-family: "DIN Light";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    overflow: hidden;
+    background: $color_3;
+    animation: slide-down-from-top 0.5s ease-in-out forwards;
+    z-index: -100 !important;
+    border-radius: 0 0 10px 10px;
+  }
+  #projectSubtitle {
+    font-family: "DIN Light";
+    font-weight: 300;
+    color: $color_2 !important;
+    font-size: 1rem;
+  }
+}
+
+@keyframes slide-down-from-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 
 #compTitle {
   font-family: "serifItalic";
   /*rotate text 90degrees*/
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1079,7 +1139,7 @@ body {
   grid-template-columns: 15vw 85vw;
   grid-template-rows: 1fr;
   grid-template-areas: "hand field";
-  color: $color_1;
+  color: $color_2;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -1090,7 +1150,7 @@ body {
 }
 
 html {
-  background-color: grey !important;
+  background-color: $color_1 !important;
 }
 
 #cardParent {
@@ -1439,18 +1499,18 @@ h3 {
   }
 
   padding: 2%;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    height: 95%;
-    border: 1px solid #999;
-    box-sizing: border-box;
-    border-radius: 30px;
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   width: 95%;
+  //   height: 95%;
+  //   border: 1px solid #999;
+  //   box-sizing: border-box;
+  //   border-radius: 30px;
+  // }
 }
 
 #selectedEduAnimationParent {
@@ -1511,7 +1571,7 @@ h3 {
 
 #root {
   margin: 0 auto;
-  color: $color_1;
+  color: $color_2;
   position: absolute;
   top: 0;
   left: 0;
@@ -1578,24 +1638,11 @@ h3 {
   justify-content: flex-start;
   width: 100%;
   min-height: 100vh;
+  height: 100vh;
   // overflow-x: hidden;
   transition: all 0.5s ease-in-out;
   z-index: 100;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
-      darkblue;
-    border-radius: 5px 5px 0 0;
-    -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.85));
-    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.85));
-    z-index: -1;
-  }
+  background: $color_3;
 }
 
 #spLogo {
