@@ -12,6 +12,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 function App() {
   const appRef = useRef(null);
   const [scrollValue, setScrollValue] = useState(0);
+  const [pauseAnimate, setPauseAnimate] = useState(false);
 
 
   const handleScroll = useCallback(() => {
@@ -34,7 +35,7 @@ function App() {
       <div id="App" ref={appRef}>
         <SelectorButtons />
         <div id="playingField" ref={appRef}>
-          <Outlet />
+          <Outlet context={[pauseAnimate, setPauseAnimate]} />
         </div>
       </div>
     </ParallaxProvider>

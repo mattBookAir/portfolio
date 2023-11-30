@@ -16,9 +16,7 @@ const VisitBlock = (props) => {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div id="visitBlock">
-        {isHovering ? <div>{visitLinkText}</div> : <div>{visitText}</div>}
-      </div>
+      <div id="visitBlock">{visitLinkText}</div>
       <Frame mobile={true} screenshot={mobileSS} />
       <Frame mobile={false} screenshot={desktopSS} />
     </div>
